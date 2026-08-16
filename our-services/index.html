@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | LLM's Marketing</title>
+  <meta name="description" content="Our services focus on using AI to improve search visibility, streamline marketing processes, and boost performance. Connect with us to expand your digital authority.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <style>
+    /* Service Flow Diagram Specific Styles */
+    .service-flow-diagram {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 36px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background-color: var(--surface);
+      box-shadow: 0 8px 20px rgba(23, 23, 23, 0.02);
+    }
+    .flow-node {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background-color: var(--surface-muted);
+      text-align: center;
+    }
+    .flow-node.highlight {
+      border-color: var(--accent);
+      background-color: var(--surface);
+      box-shadow: 0 8px 16px rgba(47, 128, 237, 0.06);
+    }
+    .flow-node .node-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .flow-node.highlight .node-tag {
+      color: var(--accent);
+    }
+    .flow-node .node-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .flow-arrow {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      font-weight: 300;
+    }
+    @media (max-width: 600px) {
+      .service-flow-diagram {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+      .flow-node {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        LLM’s Marketing<span class="logo-dot"></span>
+      </a>
+      <nav class="nav-container">
+        <ul class="nav-menu">
+          <li><a href="/about-us/" class="nav-link">About</a></li>
+          <li><a href="/our-services/" class="nav-link active">Services</a></li>
+          <li><a href="/#results" class="nav-link">Results</a></li>
+          <li><a href="/blog/" class="nav-link">Blog</a></li>
+          <li><a href="/#faq" class="nav-link">FAQ</a></li>
+          <li><a href="/contact/" class="btn btn-secondary">Start a Conversation</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container reveal-fade-up">
+      <span class="section-label">Capabilities</span>
+      <h1>AI-powered growth solutions for modern brands.</h1>
+      <p>We combine semantic SEO strategies, technical structure patterns, and automation systems to build brand authority that models and humans trust.</p>
+    </div>
+  </section>
+
+  <!-- Service Details Sections -->
+  <section class="section-white" id="ai-visibility">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="reveal-fade-up">
+          <span class="section-label">01 — Core Capability</span>
+          <h2 class="intro-large-text">AI Search Visibility &amp; LLM Optimization</h2>
+        </div>
+        <div class="intro-right reveal-fade-up stagger-1">
+          <p>
+            AI search platforms parse content differently. Rather than indexing simple anchor links, they summarize topical nodes and measure overall entities.
+          </p>
+          <p>
+            We optimize your digital footprint (citations, schema structured records, content semantic vectors) so your business shows up as the recommended choice when users ask ChatGPT, Gemini, or Perplexity for solutions.
+          </p>
+          
+          <!-- Subtle Search Pipeline Diagram -->
+          <div class="service-flow-diagram">
+            <div class="flow-node">
+              <span class="node-tag">Query</span>
+              <span class="node-label">Search Intent</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">
+              <span class="node-tag">AI Model</span>
+              <span class="node-label">Synthesis</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node highlight">
+              <span class="node-tag">Citation</span>
+              <span class="node-label">Brand Source</span>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">
+              <span class="node-tag">Customer</span>
+              <span class="node-label">Acquisition</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="seo-content">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="reveal-fade-up">
+          <span class="section-label">02 — Optimization</span>
+          <h2 class="intro-large-text">SEO &amp; High-Clarity Content Marketing</h2>
+        </div>
+        <div class="intro-right reveal-fade-up stagger-1">
+          <p>
+            Traditional search engines and LLM models both favor well-structured, authoritative, and factually consistent content copy.
+          </p>
+          <p>
+            We audit and structure your site hierarchy, establishing tight internal linking, schemas, and high-quality topical guides that resolve queries and build search engine traffic simultaneously.
+          </p>
+          <p style="margin-top: 24px;">
+            <a href="/services/digital-strategy-marketing/" class="link-arrow">Explore Service Details <span>→</span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white" id="lead-agents">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="reveal-fade-up">
+          <span class="section-label">03 — Conversion</span>
+          <h2 class="intro-large-text">AI Lead Qualification &amp; Support Agents</h2>
+        </div>
+        <div class="intro-right reveal-fade-up stagger-1">
+          <p>
+            Speed of response is the primary differentiator in modern lead conversion. Automated AI assistants can resolve standard support questions in milliseconds.
+          </p>
+          <p>
+            We build and integrate custom conversational agents trained on your database schema and business parameters to capture, qualify, and route leads into your team pipeline 24/7.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="automation">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="reveal-fade-up">
+          <span class="section-label">04 — Workflow</span>
+          <h2 class="intro-large-text">Marketing System Automations</h2>
+        </div>
+        <div class="intro-right reveal-fade-up stagger-1">
+          <p>
+            Repetitive workflows eat operational margins. By connecting CRMs, email cycles, and databases, we build scalable lead generation networks.
+          </p>
+          <p>
+            We analyze your marketing stack, remove structural redundancies, and setup clean automation triggers that coordinate response actions smoothly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white" id="email-marketing">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="reveal-fade-up">
+          <span class="section-label">05 — Outreach</span>
+          <h2 class="intro-large-text">Personalized Email Growth Campaigns</h2>
+        </div>
+        <div class="intro-right reveal-fade-up stagger-1">
+          <p>
+            A static list is a wasted asset. Conversational marketing requires contextual, behavioral email sequences triggered by visitor intents.
+          </p>
+          <p>
+            We design minimalist, text-focused, or premium branded email runs that establish direct trust relationships with subscribers and drive conversion values.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="performance-marketing">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="reveal-fade-up">
+          <span class="section-label">06 — Advertising</span>
+          <h2 class="intro-large-text">Brand Positioning &amp; Paid Performance</h2>
+        </div>
+        <div class="intro-right reveal-fade-up stagger-1">
+          <p>
+            Organic authority takes time to scale. Combining SEO foundations with targeted performance ad campaigns provides immediate validation data.
+          </p>
+          <p>
+            We configure Google Search and Meta advertising campaigns optimized for client conversion outcomes, amplifying your search authority footprint.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms We Optimize For -->
+  <section class="section-muted">
+    <div class="container">
+      <div class="section-header reveal-fade-up" style="text-align: center; margin: 0 auto 60px;">
+        <span class="section-label">Integration</span>
+        <h2 class="section-title">AI Platforms &amp; Tools We Optimize For</h2>
+      </div>
+      <div class="why-us-grid">
+        <div class="why-us-card reveal-fade-up">
+          <div class="why-us-num">01</div>
+          <h3 class="why-us-title">ChatGPT</h3>
+          <p class="why-us-desc">Ensuring your brand is linked to high-authority nodes that OpenAI models retrieve during answers generation.</p>
+        </div>
+        <div class="why-us-card reveal-fade-up stagger-1">
+          <div class="why-us-num">02</div>
+          <h3 class="why-us-title">Perplexity</h3>
+          <p class="why-us-desc">Structuring schema metrics and factual references that Perplexity's real-time citation logic pulls.</p>
+        </div>
+        <div class="why-us-card reveal-fade-up stagger-2">
+          <div class="why-us-num">03</div>
+          <h3 class="why-us-title">Google Gemini</h3>
+          <p class="why-us-desc">Aligning content hierarchy and entity connections to rank inside Google's search generative experience.</p>
+        </div>
+        <div class="why-us-card reveal-fade-up stagger-3">
+          <div class="why-us-num">04</div>
+          <h3 class="why-us-title">Claude &amp; Llama</h3>
+          <p class="why-us-desc">Formatting digital data layers to be easily indexed in standard foundational LLM dataset layers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section-contrast final-cta">
+    <div class="container">
+      <div class="final-cta-content reveal-fade-up">
+        <h2>Ready to upgrade your search footprint?</h2>
+        <p>Let's build a search strategy designed for humans, search engines and AI.</p>
+        <a href="/contact/" class="btn btn-primary">Start a Conversation →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">LLM’s Marketing<span class="logo-dot"></span></a>
+          <p>Optimizing brands for traditional search and next-generation AI discovery engines.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/our-services/#ai-visibility">AI Search Visibility</a></li>
+            <li><a href="/services/digital-strategy-marketing/">SEO &amp; Content</a></li>
+            <li><a href="/our-services/#lead-agents">AI Lead Agents</a></li>
+            <li><a href="/our-services/#automation">Automation Systems</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/blog/">Blog &amp; Insights</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Connect</h4>
+          <p>Email: <a href="mailto:info@llmsmarketing.com">info@llmsmarketing.com</a></p>
+          <p>Address: 165 Madison Avenue, NYC</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 LLM's Marketing. All Rights Reserved.</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">LN</a>
+          <a href="#" aria-label="Twitter">TW</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
