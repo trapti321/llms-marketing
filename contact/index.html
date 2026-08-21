@@ -70,7 +70,7 @@
 
         <!-- Contact Form Container -->
         <div class="contact-form-container reveal-fade-up stagger-1">
-          <form id="wpforms-form-2244" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="2244" method="post" action="/contact/">
+          <form id="wpforms-form-2244" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="2244" method="post" action="https://formsubmit.co/digitalkazmi@gmail.com">
             
             <!-- Hidden Fields for WPForms/SEO Preservation -->
             <input type="hidden" name="wpforms[id]" value="2244">
@@ -80,8 +80,11 @@
             <input type="hidden" name="page_id" value="2103">
             <input type="hidden" name="wpforms[post_id]" value="2103">
             
-            <!-- Optional Web3Forms Access Key for static setup (fallback) -->
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+            <input type="hidden" name="_subject" value="New LLM Marketing contact enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://llmsmarketing.com/contact/">
+            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
 
             <div class="form-group">
               <label for="wpforms-2244-field_1" class="form-label">Full Name *</label>
@@ -195,21 +198,10 @@
         }
 
         try {
-          // If a Web3Forms access key is configured and not default placeholder, submit to Web3Forms API
-          const accessKey = formData.get('access_key');
-          let response;
-
-          if (accessKey && accessKey !== 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
-            response = await fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              body: formData
-            });
-          } else {
-            // Fallback: Post to local contact endpoint (mock action success for static demo preview)
-            // Wait 1.2 seconds to simulate server request
-            await new Promise(resolve => setTimeout(resolve, 1200));
-            response = { ok: true };
-          }
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+          });
 
           if (response.ok) {
             notifyBox.innerText = "Thank you! Your message has been sent successfully. We will contact you shortly.";
@@ -220,7 +212,7 @@
             throw new Error("Failed to send message.");
           }
         } catch (error) {
-          notifyBox.innerText = "Oops! Something went wrong. Please email us directly at info@llmsmarketing.com.";
+          notifyBox.innerText = "Oops! Something went wrong. Please email us directly at digitalkazmi@gmail.com.";
           notifyBox.className = "form-notification error";
           notifyBox.style.display = "block";
         } finally {
