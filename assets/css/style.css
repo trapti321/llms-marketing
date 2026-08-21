@@ -439,6 +439,7 @@ a {
 .hero-actions {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 /* Premium Web Dashboard Layout Mockup Container */
@@ -1344,6 +1345,101 @@ a {
   font-weight: 300;
 }
 
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.homepage-contact-form {
+  max-width: 760px;
+  margin: 64px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid var(--dark-border);
+  text-align: left;
+}
+
+.homepage-contact-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.homepage-contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.homepage-contact-field label {
+  color: var(--dark-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.homepage-contact-field input,
+.homepage-contact-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--dark-border);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--dark-text);
+  font: inherit;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.homepage-contact-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.homepage-contact-field input::placeholder,
+.homepage-contact-field textarea::placeholder {
+  color: #77777f;
+}
+
+.homepage-contact-field input:focus,
+.homepage-contact-field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.homepage-contact-message {
+  grid-column: 1 / -1;
+}
+
+.homepage-contact-submit {
+  margin-top: 18px;
+}
+
+.homepage-contact-note {
+  margin-top: 16px;
+  color: #77777f;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+.final-cta .btn-secondary {
+  border-color: var(--dark-border);
+  color: var(--dark-text-muted);
+}
+
+.final-cta .btn-secondary:hover {
+  border-color: var(--dark-text);
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--dark-text);
+}
+
 /* 21. Footer */
 .footer {
   background-color: var(--dark-section);
@@ -1930,6 +2026,14 @@ textarea.form-control {
 
   .final-cta h2 {
     font-size: 2.5rem;
+  }
+
+  .homepage-contact-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .homepage-contact-message {
+    grid-column: auto;
   }
   
   .contact-grid {
