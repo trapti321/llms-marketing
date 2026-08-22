@@ -93,3 +93,10 @@ The contact form in `contact/index.html` preserves the identical class validatio
   ```html
   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
   ```
+
+## 🔎 SEO Publishing Checklist
+
+Every new page or blog article must include one self-referencing canonical link in its `<head>`, using the page's full production URL:
+```html
+<link rel="canonical" href="https://llmsmarketing.com/your-page/">
+```
