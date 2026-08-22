@@ -1542,6 +1542,17 @@ a {
   color: var(--accent);
 }
 
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.whatsapp-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 /* 22. Scroll Entrance Reveals */
 .reveal-fade-up {
   opacity: 0;
