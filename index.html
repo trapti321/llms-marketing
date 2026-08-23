@@ -538,7 +538,7 @@
           <a href="https://calendly.com/adilkazmi/book-a-demo-call?month=2026-01" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Strategy Call ↗</a>
           <a href="/contact/" class="btn btn-secondary">Start a Conversation</a>
         </div>
-        <form class="homepage-contact-form" action="https://formsubmit.co/f186d1ed18a58c0e4bea1f20bdadb3e6" method="POST">
+        <form class="homepage-contact-form" action="https://formsubmit.co/ajax/f186d1ed18a58c0e4bea1f20bdadb3e6" method="POST">
           <input type="hidden" name="_subject" value="New LLM Marketing website enquiry">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
@@ -617,5 +617,32 @@
 
   <!-- Scripts -->
   <script type="module" src="/assets/js/main.js"></script>
+  <script>
+    document.querySelector('.homepage-contact-form')?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.innerText = 'Sending...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form)
+        });
+        const result = await response.json();
+        if (response.ok && result.success === 'true') {
+          window.location.href = 'https://llmsmarketing.com/thank-you/';
+          return;
+        }
+        throw new Error('Form submission failed');
+      } catch (error) {
+        submitButton.disabled = false;
+        submitButton.innerText = 'Send Enquiry ↗';
+        alert('Something went wrong. Please email us directly at digitalkazmi@gmail.com.');
+      }
+    });
+  </script>
 </body>
 </html>

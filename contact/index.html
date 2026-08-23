@@ -71,7 +71,7 @@
 
         <!-- Contact Form Container -->
         <div class="contact-form-container reveal-fade-up stagger-1">
-          <form id="wpforms-form-2244" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="2244" method="post" action="https://formsubmit.co/f186d1ed18a58c0e4bea1f20bdadb3e6">
+          <form id="wpforms-form-2244" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="2244" method="post" action="https://formsubmit.co/ajax/f186d1ed18a58c0e4bea1f20bdadb3e6">
             
             <!-- Hidden Fields for WPForms/SEO Preservation -->
             <input type="hidden" name="wpforms[id]" value="2244">
@@ -200,11 +200,13 @@
 
         try {
           const response = await fetch(form.action, {
+            headers: { Accept: 'application/json' },
             method: 'POST',
             body: formData
           });
+          const result = await response.json();
 
-          if (response.ok) {
+          if (response.ok && result.success === 'true') {
             notifyBox.innerText = "Thank you! Your message has been sent successfully. We will contact you shortly.";
             notifyBox.className = "form-notification success";
             notifyBox.style.display = "block";
