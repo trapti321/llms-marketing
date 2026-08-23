@@ -89,22 +89,22 @@
 
             <div class="form-group">
               <label for="wpforms-2244-field_1" class="form-label">Full Name *</label>
-              <input type="text" id="wpforms-2244-field_1" class="form-control wpforms-field-large wpforms-field-required" name="wpforms[fields][1]" placeholder="Aman Sharma" required>
+              <input type="text" id="wpforms-2244-field_1" class="form-control wpforms-field-large wpforms-field-required" name="name" placeholder="Aman Sharma" required>
             </div>
 
             <div class="form-group">
               <label for="wpforms-2244-field_6" class="form-label">Email Address *</label>
-              <input type="email" id="wpforms-2244-field_6" class="form-control wpforms-field-large wpforms-field-required" name="wpforms[fields][6]" placeholder="aman@llmsmarketing.com" required>
+              <input type="email" id="wpforms-2244-field_6" class="form-control wpforms-field-large wpforms-field-required" name="email" placeholder="aman@llmsmarketing.com" required>
             </div>
 
             <div class="form-group">
               <label for="wpforms-2244-field_2" class="form-label">Subject</label>
-              <input type="text" id="wpforms-2244-field_2" class="form-control wpforms-field-medium" name="wpforms[fields][2]" placeholder="AI Search Visibility Audit">
+              <input type="text" id="wpforms-2244-field_2" class="form-control wpforms-field-medium" name="subject" placeholder="AI Search Visibility Audit">
             </div>
 
             <div class="form-group">
               <label for="wpforms-2244-field_5" class="form-label">Project Details / Message</label>
-              <textarea id="wpforms-2244-field_5" class="form-control wpforms-field-medium" name="wpforms[fields][5]" placeholder="Describe your business and optimization goals..."></textarea>
+              <textarea id="wpforms-2244-field_5" class="form-control wpforms-field-medium" name="message" placeholder="Describe your business and optimization goals..."></textarea>
             </div>
 
             <button type="submit" name="wpforms[submit]" id="wpforms-submit-2244" class="btn btn-primary wpforms-submit" style="width: 100%;" value="wpforms-submit">
@@ -185,8 +185,8 @@
 
         // Read form data
         const formData = new FormData(form);
-        const name = formData.get('wpforms[fields][1]');
-        const email = formData.get('wpforms[fields][6]');
+        const name = formData.get('name');
+        const email = formData.get('email');
 
         // Perform validation
         if (!name || !email) {
