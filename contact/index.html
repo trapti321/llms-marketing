@@ -71,7 +71,7 @@
 
         <!-- Contact Form Container -->
         <div class="contact-form-container reveal-fade-up stagger-1">
-          <form id="wpforms-form-2244" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="2244" method="post" action="https://formsubmit.co/ajax/f186d1ed18a58c0e4bea1f20bdadb3e6">
+          <form id="wpforms-form-2244" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="2244" method="post" action="https://formsubmit.co/f186d1ed18a58c0e4bea1f20bdadb3e6">
             
             <!-- Hidden Fields for WPForms/SEO Preservation -->
             <input type="hidden" name="wpforms[id]" value="2244">
@@ -163,65 +163,53 @@
   </footer>
 
   <script type="module" src="/assets/js/main.js"></script>
-
-  <!-- Form Submission Scripts -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    (() => {
       const form = document.getElementById('wpforms-form-2244');
-      const submitBtn = document.getElementById('wpforms-submit-2244');
       const notifyBox = document.getElementById('form-notification-box');
+      const emailInput = form?.querySelector('input[type="email"]');
+      const honeypot = form?.querySelector('input[name="_honey"]');
 
-      if (!form || !submitBtn || !notifyBox) return;
+      if (!form || !emailInput || !notifyBox) return;
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Show sending state
-        submitBtn.disabled = true;
-        const originalText = submitBtn.innerText;
-        submitBtn.innerText = "Sending...";
-        notifyBox.style.display = "none";
-        notifyBox.className = "form-notification";
+      const showValidationMessage = (message) => {
+        notifyBox.textContent = message;
+        notifyBox.className = 'form-notification error';
+        notifyBox.style.display = 'block';
+        emailInput.focus();
+      };
 
-        // Read form data
-        const formData = new FormData(form);
-        const name = formData.get('name');
-        const email = formData.get('email');
+      form.addEventListener('submit', (event) => {
+        const email = (emailInput.value || '').trim();
 
-        // Perform validation
-        if (!name || !email) {
-          notifyBox.innerText = "Please fill in all required fields.";
-          notifyBox.className = "form-notification error";
-          notifyBox.style.display = "block";
-          submitBtn.disabled = false;
-          submitBtn.innerText = originalText;
+        if (honeypot && honeypot.value) {
+          event.preventDefault();
+          showValidationMessage('Your message could not be sent. Please try again or email info@llmsmarketing.com directly.');
           return;
         }
 
-        try {
-          const response = await fetch(form.action, {
-            headers: { Accept: 'application/json' },
-            method: 'POST',
-            body: formData
-          });
-          const result = await response.json();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          event.preventDefault();
+          showValidationMessage('Please enter a valid email address so we can reply to you. You can also email info@llmsmarketing.com directly.');
+          emailInput.setCustomValidity('Please enter a valid email address.');
+          emailInput.reportValidity();
+          return;
+        }
 
-          if (response.ok && result.success === 'true') {
-            window.location.href = 'https://llmsmarketing.com/thank-you/';
-            return;
-          } else {
-            throw new Error("Failed to send message.");
-          }
-        } catch (error) {
-          notifyBox.innerText = "Oops! Something went wrong. Please email us directly at digitalkazmi@gmail.com.";
-          notifyBox.className = "form-notification error";
-          notifyBox.style.display = "block";
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.innerText = originalText;
+        emailInput.setCustomValidity('');
+        notifyBox.style.display = 'none';
+        notifyBox.className = 'form-notification';
+      });
+
+      emailInput.addEventListener('input', () => {
+        emailInput.setCustomValidity('');
+        if (notifyBox.style.display === 'block') {
+          notifyBox.style.display = 'none';
+          notifyBox.className = 'form-notification';
         }
       });
-    });
+    })();
   </script>
 </body>
 </html>

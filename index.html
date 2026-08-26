@@ -538,7 +538,7 @@
           <a href="https://calendly.com/adilkazmi/book-a-demo-call?month=2026-01" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Strategy Call ↗</a>
           <a href="/contact/" class="btn btn-secondary">Start a Conversation</a>
         </div>
-        <form class="homepage-contact-form" action="https://formsubmit.co/ajax/f186d1ed18a58c0e4bea1f20bdadb3e6" method="POST">
+        <form class="homepage-contact-form" action="https://formsubmit.co/f186d1ed18a58c0e4bea1f20bdadb3e6" method="POST">
           <input type="hidden" name="_subject" value="New LLM Marketing website enquiry">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
@@ -618,31 +618,49 @@
   <!-- Scripts -->
   <script type="module" src="/assets/js/main.js"></script>
   <script>
-    document.querySelector('.homepage-contact-form')?.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const form = event.currentTarget;
-      const submitButton = form.querySelector('button[type="submit"]');
-      submitButton.disabled = true;
-      submitButton.innerText = 'Sending...';
+    (() => {
+      const form = document.querySelector('.homepage-contact-form');
+      const emailInput = form?.querySelector('input[type="email"]');
+      const honeypot = form?.querySelector('input[name="_honey"]');
+      const note = form?.querySelector('.homepage-contact-note');
 
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: new FormData(form)
-        });
-        const result = await response.json();
-        if (response.ok && result.success === 'true') {
-          window.location.href = 'https://llmsmarketing.com/thank-you/';
+      if (!form || !emailInput || !note) return;
+
+      const setNote = (message, isError = false) => {
+        note.textContent = message;
+        note.style.color = isError ? '#ef4444' : '#77777f';
+      };
+
+      form.addEventListener('submit', (event) => {
+        const email = (emailInput.value || '').trim();
+
+        if (honeypot && honeypot.value) {
+          event.preventDefault();
+          setNote('Your message could not be sent. Please try again or email info@llmsmarketing.com directly.', true);
           return;
         }
-        throw new Error('Form submission failed');
-      } catch (error) {
-        submitButton.disabled = false;
-        submitButton.innerText = 'Send Enquiry ↗';
-        alert('Something went wrong. Please email us directly at digitalkazmi@gmail.com.');
-      }
-    });
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          event.preventDefault();
+          emailInput.focus();
+          emailInput.setCustomValidity('Please enter a valid email address.');
+          emailInput.reportValidity();
+          setNote('Please enter a valid email address so we can reply to you. You can also email info@llmsmarketing.com directly.', true);
+          return;
+        }
+
+        emailInput.setCustomValidity('');
+        setNote('We’ll reply to your email within one business day.');
+      });
+
+      emailInput.addEventListener('input', () => {
+        emailInput.setCustomValidity('');
+        if (note.style.color === 'rgb(239, 68, 68)' || note.style.color === '#ef4444') {
+          setNote('We’ll reply to your email within one business day.');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
