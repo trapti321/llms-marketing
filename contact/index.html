@@ -71,16 +71,7 @@
 
         <!-- Contact Form Container -->
         <div class="contact-form-container reveal-fade-up stagger-1">
-          <form id="wpforms-form-2244" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="2244" method="post" action="https://formsubmit.co/f186d1ed18a58c0e4bea1f20bdadb3e6">
-            
-            <!-- Hidden Fields for WPForms/SEO Preservation -->
-            <input type="hidden" name="wpforms[id]" value="2244">
-            <input type="hidden" name="page_title" value="Contact">
-            <input type="hidden" name="page_url" value="https://llmsmarketing.com/contact/">
-            <input type="hidden" name="url_referer" value="">
-            <input type="hidden" name="page_id" value="2103">
-            <input type="hidden" name="wpforms[post_id]" value="2103">
-            
+          <form id="contact-form" class="contact-form" method="post" action="https://formsubmit.co/digitalkazmi@gmail.com">
             <input type="hidden" name="_subject" value="New LLM Marketing contact enquiry">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
@@ -88,31 +79,23 @@
             <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
 
             <div class="form-group">
-              <label for="wpforms-2244-field_1" class="form-label">Full Name *</label>
-              <input type="text" id="wpforms-2244-field_1" class="form-control wpforms-field-large wpforms-field-required" name="name" placeholder="Aman Sharma" required>
+              <label for="contact-name" class="form-label">Name</label>
+              <input type="text" id="contact-name" class="form-control" name="name" placeholder="Your name" autocomplete="name" required>
             </div>
 
             <div class="form-group">
-              <label for="wpforms-2244-field_6" class="form-label">Email Address *</label>
-              <input type="email" id="wpforms-2244-field_6" class="form-control wpforms-field-large wpforms-field-required" name="email" placeholder="aman@llmsmarketing.com" required>
+              <label for="contact-email" class="form-label">Email</label>
+              <input type="email" id="contact-email" class="form-control" name="email" placeholder="you@example.com" autocomplete="email" required>
             </div>
 
             <div class="form-group">
-              <label for="wpforms-2244-field_2" class="form-label">Subject</label>
-              <input type="text" id="wpforms-2244-field_2" class="form-control wpforms-field-medium" name="subject" placeholder="AI Search Visibility Audit">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" class="form-control" name="message" placeholder="How can we help?" autocomplete="off" required></textarea>
             </div>
 
-            <div class="form-group">
-              <label for="wpforms-2244-field_5" class="form-label">Project Details / Message</label>
-              <textarea id="wpforms-2244-field_5" class="form-control wpforms-field-medium" name="message" placeholder="Describe your business and optimization goals..."></textarea>
-            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
 
-            <button type="submit" name="wpforms[submit]" id="wpforms-submit-2244" class="btn btn-primary wpforms-submit" style="width: 100%;" value="wpforms-submit">
-              Submit Now
-            </button>
-
-            <!-- Interactive Notification State -->
-            <div id="form-notification-box" class="form-notification"></div>
+            <p id="contact-form-note" class="form-notification" aria-live="polite"></p>
 
           </form>
         </div>
@@ -165,9 +148,9 @@
   <script type="module" src="/assets/js/main.js"></script>
   <script>
     (() => {
-      const form = document.getElementById('wpforms-form-2244');
-      const notifyBox = document.getElementById('form-notification-box');
-      const emailInput = form?.querySelector('input[type="email"]');
+      const form = document.getElementById('contact-form');
+      const notifyBox = document.getElementById('contact-form-note');
+      const emailInput = form?.querySelector('input[name="email"]');
       const honeypot = form?.querySelector('input[name="_honey"]');
 
       if (!form || !emailInput || !notifyBox) return;
@@ -184,14 +167,14 @@
 
         if (honeypot && honeypot.value) {
           event.preventDefault();
-          showValidationMessage('Your message could not be sent. Please try again or email info@llmsmarketing.com directly.');
+          showValidationMessage('Your message could not be sent. Please try again or email digitalkazmi@gmail.com directly.');
           return;
         }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
           event.preventDefault();
-          showValidationMessage('Please enter a valid email address so we can reply to you. You can also email info@llmsmarketing.com directly.');
+          showValidationMessage('Please enter a valid email address so we can reply to you. You can also email digitalkazmi@gmail.com directly.');
           emailInput.setCustomValidity('Please enter a valid email address.');
           emailInput.reportValidity();
           return;

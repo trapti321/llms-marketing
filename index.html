@@ -538,7 +538,7 @@
           <a href="https://calendly.com/adilkazmi/book-a-demo-call?month=2026-01" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Strategy Call ↗</a>
           <a href="/contact/" class="btn btn-secondary">Start a Conversation</a>
         </div>
-        <form class="homepage-contact-form" action="https://formsubmit.co/f186d1ed18a58c0e4bea1f20bdadb3e6" method="POST">
+        <form class="homepage-contact-form" action="https://formsubmit.co/digitalkazmi@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New LLM Marketing website enquiry">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
@@ -547,15 +547,15 @@
           <div class="homepage-contact-fields">
             <div class="homepage-contact-field">
               <label for="homepage-name">Your name</label>
-              <input type="text" id="homepage-name" name="name" placeholder="Your name" required>
+              <input type="text" id="homepage-name" name="name" placeholder="Your name" autocomplete="name" required>
             </div>
             <div class="homepage-contact-field">
               <label for="homepage-email">Email address</label>
-              <input type="email" id="homepage-email" name="email" placeholder="you@company.com" required>
+              <input type="email" id="homepage-email" name="email" placeholder="you@example.com" autocomplete="email" required>
             </div>
             <div class="homepage-contact-field homepage-contact-message">
               <label for="homepage-message">How can we help?</label>
-              <textarea id="homepage-message" name="message" placeholder="Tell us about your growth goals" required></textarea>
+              <textarea id="homepage-message" name="message" placeholder="How can we help?" autocomplete="off" required></textarea>
             </div>
           </div>
           <button type="submit" class="btn btn-primary homepage-contact-submit">Send Enquiry ↗</button>
@@ -636,7 +636,7 @@
 
         if (honeypot && honeypot.value) {
           event.preventDefault();
-          setNote('Your message could not be sent. Please try again or email info@llmsmarketing.com directly.', true);
+          setNote('Your message could not be sent. Please try again or email digitalkazmi@gmail.com directly.', true);
           return;
         }
 
@@ -646,7 +646,7 @@
           emailInput.focus();
           emailInput.setCustomValidity('Please enter a valid email address.');
           emailInput.reportValidity();
-          setNote('Please enter a valid email address so we can reply to you. You can also email info@llmsmarketing.com directly.', true);
+          setNote('Please enter a valid email address so we can reply to you. You can also email digitalkazmi@gmail.com directly.', true);
           return;
         }
 
