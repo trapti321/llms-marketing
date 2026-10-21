@@ -1738,6 +1738,8 @@ a {
   line-height: 1.85;
   color: var(--text-secondary);
   font-weight: 300;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .post-body p {
@@ -1756,7 +1758,8 @@ a {
   color: var(--text-primary);
 }
 
-.post-body ul {
+.post-body ul,
+.post-body ol {
   padding-left: 24px;
   margin-bottom: 28px;
 }
@@ -1764,6 +1767,23 @@ a {
 .post-body li {
   margin-bottom: 12px;
 }
+
+.post-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.post-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition-fast);
+}
+
+.post-body a:hover {
+  color: var(--accent-hover);
+}
+
 
 /* Contact Form Styling */
 .contact-grid {

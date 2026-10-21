@@ -100,3 +100,9 @@ Every new page or blog article must include one self-referencing canonical link 
 ```html
 <link rel="canonical" href="https://llmsmarketing.com/your-page/">
 ```
+
+
+Deployement process - 
+1. git add .
+2. git commit -m "first blog post"
+3. git push
