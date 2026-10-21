@@ -71,7 +71,7 @@
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://llmsmarketing.com/thank-you/">
-            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
+            <input type="text" name="_honey" class="form-honeypot" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div class="form-group">
               <label for="contact-name" class="form-label">Name</label>
@@ -146,7 +146,6 @@
       const form = document.getElementById('contact-form');
       const notifyBox = document.getElementById('contact-form-note');
       const emailInput = form?.querySelector('input[name="email"]');
-      const honeypot = form?.querySelector('input[name="_honey"]');
 
       if (!form || !emailInput || !notifyBox) return;
 
@@ -160,11 +159,6 @@
       form.addEventListener('submit', (event) => {
         const email = (emailInput.value || '').trim();
 
-        if (honeypot && honeypot.value) {
-          event.preventDefault();
-          showValidationMessage('Your message could not be sent. Please try again or email digitalkazmi@gmail.com directly.');
-          return;
-        }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
