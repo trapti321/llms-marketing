@@ -3588,3 +3588,19 @@ textarea.form-control {
   object-fit: cover;
   border-radius: 50%;
 }
+
+/* Post published / last update line */
+.post-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 28px;
+  margin: 4px 0 18px;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+}
+
+.post-dates b {
+  margin-right: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
