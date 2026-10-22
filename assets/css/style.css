@@ -2315,6 +2315,44 @@ textarea.form-control {
   color: var(--accent);
 }
 
+/* Wide screens: TOC sits in the empty left margin and follows the reader */
+@media (min-width: 1360px) {
+  .post-body {
+    position: relative;
+  }
+
+  .post-toc {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 260px;
+    margin: 0;
+    border: 0;
+    background: none;
+  }
+
+  .post-toc details {
+    position: sticky;
+    top: 120px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--surface);
+  }
+
+  .post-toc summary {
+    padding: 16px 20px;
+  }
+
+  .post-toc ol {
+    padding: 0 20px 18px 38px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
 .author-box {
   display: flex;
   gap: 24px;
