@@ -21,17 +21,15 @@
   <!-- Header Section -->
   <header class="header">
     <div class="container">
-      <a href="/" class="logo">
-        LLM’s Marketing<span class="logo-dot"></span>
-      </a>
-      <nav class="nav-container">
+      <a href="/" class="logo">LLM’s Marketing<span class="logo-dot"></span></a>
+      <nav class="nav-container" aria-label="Main">
         <ul class="nav-menu">
-          <li><a href="/about-us/" class="nav-link">About</a></li>
           <li><a href="/our-services/" class="nav-link">Services</a></li>
-          <li><a href="#results" class="nav-link">Results</a></li>
+          <li><a href="/case-studies/" class="nav-link">Case Studies</a></li>
+          <li><a href="/our-approach/" class="nav-link">Approach</a></li>
           <li><a href="/blog/" class="nav-link">Blog</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="/contact/" class="btn btn-secondary">Start a Conversation</a></li>
+          <li><a href="/about-us/" class="nav-link">About</a></li>
+          <li><a href="/book-a-call/" class="btn btn-secondary">Book a call</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" aria-label="Toggle Menu">
@@ -43,36 +41,53 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero bg-dots">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content reveal-fade-up">
-          <span class="hero-tagline">Rank on LLM platforms like ChatGPT, Perplexity &amp; Claude</span>
-          <h1 class="hero-headline">LLM Marketing for Higher Visibility on ChatGPT, Perplexity &amp; Claude</h1>
+          <span class="hero-tagline">AI search visibility agency</span>
+          <h1 class="hero-headline">LLM Marketing for Higher Visibility on <em class="accent">ChatGPT, Perplexity &amp; Claude</em></h1>
           <p class="hero-description">
             LLM’s Marketing helps ambitious brands become visible across Google, ChatGPT, Perplexity, Gemini and the next generation of search.
           </p>
           <div class="hero-actions">
-            <a href="https://calendly.com/adilkazmi/book-a-demo-call" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Strategy Call ↗</a>
-            <a href="/contact/" class="btn btn-secondary">Start a Conversation</a>
+            <a href="/book-a-call/" class="btn btn-primary">Book a discovery call</a>
+            <a href="/our-services/" class="btn btn-secondary">See our services</a>
           </div>
+          <p class="hero-founder">
+            <span class="author-avatar author-avatar--sm" aria-hidden="true">MAK</span>
+            <span>Led by <a href="/author/mohd-adil-kazmi/">Mohd Adil Kazmi</a>, SEO specialist with 6+ years of hands-on search experience.</span>
+          </p>
         </div>
-        <div class="hero-visual reveal-fade-up stagger-1">
-          <div class="hero-visual-header">
-            <div class="hero-visual-dots">
-              <div class="hero-visual-dot"></div>
-              <div class="hero-visual-dot"></div>
-              <div class="hero-visual-dot"></div>
+        <div class="hero-visual-card reveal-fade-up stagger-1">
+          <figure class="ai-answer" aria-label="Illustrative example: an AI assistant answer that cites a brand">
+            <div class="ai-answer-head" aria-hidden="true"><span>AI answer</span><span>Illustrative example</span></div>
+            <div class="ai-answer-body">
+              <p class="ai-prompt">Which agency can help a SaaS brand show up in ChatGPT answers?</p>
+              <div class="ai-reply">
+                <p class="ai-reply-intro">Based on current sources, these are cited most often:</p>
+                <ol class="ai-list">
+                  <li><span>1</span> Competitor A</li>
+                  <li class="is-cited"><span>2</span> Your brand <span class="ai-cited">CITED</span></li>
+                  <li><span>3</span> Competitor B</li>
+                </ol>
+              </div>
+              <figcaption class="ai-caption">If AI doesn't name you, the buyer may never see you.</figcaption>
             </div>
-            <div class="hero-visual-title">Recommendation Nodes</div>
-          </div>
-          <canvas id="hero-canvas" class="canvas-container"></canvas>
-          <div class="visual-labels label-search">SEARCH GRAPH</div>
-          <div class="visual-labels label-engine">AUTHORITY SEEDS: ACTIVE</div>
+          </figure>
+          <p class="ai-steps"><span>AI scans the web</span><span>checks trusted mentions and structured data</span><span>recommends brands it can verify</span></p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Platforms ticker -->
+  <div class="ticker" aria-label="AI platforms we optimize for: ChatGPT, Perplexity, Gemini, Claude, Google AI Overviews and Microsoft Copilot">
+    <div class="ticker-track" aria-hidden="true">
+      <ul class="ticker-group"><li>ChatGPT</li><li>Perplexity</li><li>Gemini</li><li>Claude</li><li>Google AI Overviews</li><li>Microsoft Copilot</li><li>Get named, not just ranked</li><li>Content AI can quote</li><li>Measured in leads</li></ul>
+      <ul class="ticker-group"><li>ChatGPT</li><li>Perplexity</li><li>Gemini</li><li>Claude</li><li>Google AI Overviews</li><li>Microsoft Copilot</li><li>Get named, not just ranked</li><li>Content AI can quote</li><li>Measured in leads</li></ul>
+    </div>
+  </div>
 
   <!-- Social Proof Credibility Strip -->
   <section class="social-proof">
@@ -87,80 +102,143 @@
     </div>
   </section>
 
-  <!-- Intro / Positioning Section -->
-  <section class="section">
+  <!-- The Shift + Results -->
+  <section class="section-contrast" id="results">
     <div class="container">
-      <div class="intro-grid">
+      <div class="shift-grid">
         <div class="reveal-fade-up">
           <span class="section-label">01 — The Shift</span>
-          <h2 class="intro-large-text">Search is changing.<br>Your strategy should too.</h2>
-        </div>
-        <div class="intro-right reveal-fade-up stagger-1">
+          <h2 class="intro-large-text">Search is changing. <em class="accent">Your strategy should too.</em></h2>
           <p>
             People are no longer relying only on traditional search engines. They are asking AI platforms for answers, recommendations, and expert guidance.
           </p>
           <p>
-            We help brands stay visible, relevant, and trusted where these decisions now happen—inside Large Language Models (LLMs) like ChatGPT, Gemini, and Perplexity.
+            We help brands stay visible, relevant, and trusted where these decisions now happen: inside AI assistants like ChatGPT, Gemini, and Perplexity.
           </p>
+        </div>
+        <div class="stats-grid reveal-fade-up stagger-1">
+          <div class="metric-item">
+            <div class="metric-number" data-target="390+">390+</div>
+            <div class="metric-label">Delivered Projects</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" data-target="70%">70%</div>
+            <div class="metric-label">Returning Clients</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" data-target="90%">90%</div>
+            <div class="metric-label">Success Rate</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" data-target="6+">6+</div>
+            <div class="metric-label">Years of Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="section-white">
+    <div class="container">
+      <div class="split-intro">
+        <div class="reveal-fade-up">
+          <span class="section-label">02 — The Problem We Solve</span>
+          <h2 class="section-title">Good businesses are <em class="accent">missing from the answer.</em></h2>
+          <p>
+            More buyers now ask an AI assistant before they ever visit a website. If your brand is not part of that answer, you are not on the shortlist.
+          </p>
+          <p>
+            We fix the gaps that keep you out: unclear content, inconsistent brand information, weak third-party proof and slow follow-up.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="num-card reveal-fade-up">
+            <span class="num-card-num">01</span>
+            <h3>Invisible in AI answers</h3>
+            <p>Buyers ask ChatGPT or Perplexity for a recommendation. Your competitors get named. You do not.</p>
+          </article>
+          <article class="num-card reveal-fade-up">
+            <span class="num-card-num">02</span>
+            <h3>Ranking, but not cited</h3>
+            <p>Your pages rank on Google, yet AI tools summarize the topic using other sources.</p>
+          </article>
+          <article class="num-card reveal-fade-up">
+            <span class="num-card-num">03</span>
+            <h3>Inconsistent brand information</h3>
+            <p>Your website, profiles and listings describe you differently, so AI is unsure what you do.</p>
+          </article>
+          <article class="num-card reveal-fade-up">
+            <span class="num-card-num">04</span>
+            <h3>Content that misses real questions</h3>
+            <p>Blog posts target keywords but never answer what buyers actually ask before choosing.</p>
+          </article>
+          <article class="num-card reveal-fade-up">
+            <span class="num-card-num">05</span>
+            <h3>Slow lead follow-up</h3>
+            <p>New enquiries wait hours for a reply, and the hottest leads go to whoever answers first.</p>
+          </article>
+          <article class="num-card reveal-fade-up">
+            <span class="num-card-num">06</span>
+            <h3>No way to measure it</h3>
+            <p>You can see clicks and rankings, but not how often AI recommends you or what that brings in.</p>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="section-white" id="services">
+  <section class="section-tint bg-dots" id="services">
     <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-label">02 — Growth Engines</span>
-        <h2 class="section-title">What we build around your growth.</h2>
+      <div class="section-head-split reveal-fade-up">
+        <div>
+          <span class="section-label">03 — Our Services</span>
+          <h2 class="section-title">What we build <em class="accent">around your growth.</em></h2>
+        </div>
+        <p>Visibility, content and lead follow-up, planned together so every new mention has somewhere to convert.</p>
       </div>
       <div class="services-list">
-        
-        <!-- Service 1 -->
-        <a href="/our-services/#ai-visibility" class="service-item reveal-fade-up">
+
+        <a href="/services/ai-search-visibility/" class="service-item reveal-fade-up">
           <div class="service-item-num">01</div>
           <div class="service-item-title">AI Search Visibility</div>
-          <p class="service-item-desc">Optimize your brand context and authority so your business appears inside AI-generated answers across ChatGPT, Gemini, and Perplexity.</p>
+          <p class="service-item-desc">Get your brand mentioned and cited in AI answers across ChatGPT, Gemini, Perplexity and Google AI Overviews.</p>
           <span class="service-item-arrow">→</span>
         </a>
 
-        <!-- Service 2 -->
-        <a href="/services/digital-strategy-marketing/" class="service-item reveal-fade-up">
+        <a href="/services/ai-seo/" class="service-item reveal-fade-up">
           <div class="service-item-num">02</div>
-          <div class="service-item-title">SEO &amp; Content</div>
-          <p class="service-item-desc">Build highly clear, semantic, purpose-driven content structures that search engines rank and AI platforms easily interpret.</p>
+          <div class="service-item-title">AI SEO &amp; Content</div>
+          <p class="service-item-desc">Clear, useful content and a technically healthy site that ranks on Google and that AI tools can understand and quote.</p>
           <span class="service-item-arrow">→</span>
         </a>
 
-        <!-- Service 3 -->
-        <a href="/our-services/#lead-agents" class="service-item reveal-fade-up">
+        <a href="/services/ai-lead-agents/" class="service-item reveal-fade-up">
           <div class="service-item-num">03</div>
           <div class="service-item-title">AI Lead Agents</div>
-          <p class="service-item-desc">Deploy intelligent automated agents for lead capture, follow-up, and qualification working 24/7 in your funnel.</p>
+          <p class="service-item-desc">AI agents that answer enquiries, ask qualifying questions and book calls around the clock.</p>
           <span class="service-item-arrow">→</span>
         </a>
 
-        <!-- Service 4 -->
-        <a href="/our-services/#automation" class="service-item reveal-fade-up">
+        <a href="/services/marketing-automation/" class="service-item reveal-fade-up">
           <div class="service-item-num">04</div>
           <div class="service-item-title">Marketing Automation</div>
-          <p class="service-item-desc">Streamline complex workflows and tools to save operational time, increase responsiveness, and boost overall conversion efficiency.</p>
+          <p class="service-item-desc">Connect your forms, CRM and follow-ups so leads are routed and nurtured without manual work.</p>
           <span class="service-item-arrow">→</span>
         </a>
 
-        <!-- Service 5 -->
-        <a href="/our-services/#email-marketing" class="service-item reveal-fade-up">
+        <a href="/services/email-marketing/" class="service-item reveal-fade-up">
           <div class="service-item-num">05</div>
-          <div class="service-item-title">Email Growth</div>
-          <p class="service-item-desc">Design custom email templates and trigger automations that convert subscribers into high-intent inbound clients.</p>
+          <div class="service-item-title">Email Marketing</div>
+          <p class="service-item-desc">Email templates and automated sequences that turn subscribers and leads into booked calls.</p>
           <span class="service-item-arrow">→</span>
         </a>
 
-        <!-- Service 6 -->
         <a href="/our-services/#performance-marketing" class="service-item reveal-fade-up">
           <div class="service-item-num">06</div>
           <div class="service-item-title">Brand &amp; Performance</div>
-          <p class="service-item-desc">Establish cohesive brand identity, funnel structures, and high-impact paid performance campaigns to accelerate market reach.</p>
+          <p class="service-item-desc">Brand positioning, funnels and paid campaigns that support your search and AI visibility.</p>
           <span class="service-item-arrow">→</span>
         </a>
 
@@ -168,61 +246,57 @@
     </div>
   </section>
 
-  <!-- Interactive AI Search Visibility Feature Section -->
-  <section class="section visibility-interactive">
+  <!-- Why Us: comparison -->
+  <section class="section-white">
     <div class="container">
-      <div class="interactive-container">
-        <div class="reveal-fade-up">
-          <span class="section-label">03 — Live Resolver</span>
-          <h2 class="section-title" style="margin-bottom: 24px;">How brands get recommended by AI.</h2>
-          <p style="margin-bottom: 30px;">
-            AI engines synthesize recommendations in real-time. They scan web structures, check semantic authority nodes, and look for consistent brand trust signals before outputting suggestions.
-          </p>
-          <div class="demo-tabs">
-            <button class="demo-tab-btn active" data-scenario="visibility">AI Search Visibility</button>
-            <button class="demo-tab-btn" data-scenario="automation">AI Lead Agents</button>
-            <button class="demo-tab-btn" data-scenario="email">Email Growth</button>
-          </div>
+      <div class="section-head-split reveal-fade-up">
+        <div>
+          <span class="section-label">04 — Why LLM's Marketing</span>
+          <h2 class="section-title">Rankings get you listed. <em class="accent">Answers get you chosen.</em></h2>
         </div>
-        
-        <div class="interactive-demo reveal-fade-up stagger-1">
-          <div class="demo-browser-bar">
-            <div class="browser-dot red"></div>
-            <div class="browser-dot yellow"></div>
-            <div class="browser-dot green"></div>
-            <div class="browser-input">
-              <span>https://chatgpt.com</span>
-              <span style="opacity: 0.5;">🔒</span>
-            </div>
-          </div>
-          <div class="demo-flow-container">
-            <!-- Dynamically populated steps via javascript -->
-          </div>
-        </div>
+        <p>Most options solve one piece of the problem. We connect search, AI visibility and lead follow-up into one plan.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Results Section -->
-  <section class="section-muted" id="results">
-    <div class="container">
-      <div class="metrics-grid">
-        <div class="metric-item reveal-fade-up">
-          <div class="metric-number" data-target="390+">390+</div>
-          <div class="metric-label">Delivered Projects</div>
-        </div>
-        <div class="metric-item reveal-fade-up stagger-1">
-          <div class="metric-number" data-target="70%">70%</div>
-          <div class="metric-label">Returning Clients</div>
-        </div>
-        <div class="metric-item reveal-fade-up stagger-2">
-          <div class="metric-number" data-target="90%">90%</div>
-          <div class="metric-label">Success Rate</div>
-        </div>
-        <div class="metric-item reveal-fade-up stagger-3">
-          <div class="metric-number" data-target="6+">6+</div>
-          <div class="metric-label">Years of Experience</div>
-        </div>
+      <div class="pillars reveal-fade-up">
+        <span>SEO</span><span>AI visibility</span><span>Content</span><span>Automation</span>
+        <p>Four things most businesses buy separately. We plan them as one system.</p>
+      </div>
+      <div class="compare-wrap reveal-fade-up">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col">Alternative</th>
+              <th scope="col">Their strength</th>
+              <th scope="col">Where it falls short</th>
+              <th scope="col">Our approach</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Traditional SEO agency</th>
+              <td>Google rankings and technical audits</td>
+              <td>Rarely tracks or improves how AI tools describe you</td>
+              <td>We optimize for Google and AI answers together.</td>
+            </tr>
+            <tr>
+              <th scope="row">AI content tools</th>
+              <td>Speed and volume</td>
+              <td>Generic content with no evidence, which AI has little reason to cite</td>
+              <td>Expert-led content built on real buyer questions.</td>
+            </tr>
+            <tr>
+              <th scope="row">In-house team</th>
+              <td>Deep knowledge of the business</td>
+              <td>Hard to keep up with how fast AI search is changing</td>
+              <td>We bring the testing and the playbook. Your team keeps ownership.</td>
+            </tr>
+            <tr>
+              <th scope="row">A freelancer per channel</th>
+              <td>Low cost per task</td>
+              <td>SEO, content and lead follow-up never connect</td>
+              <td>One plan, from first mention to booked call.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -231,8 +305,9 @@
   <section class="section-white">
     <div class="container">
       <div class="section-header reveal-fade-up">
-        <span class="section-label">04 — Case Studies</span>
-        <h2 class="section-title">Selected Work</h2>
+        <span class="section-label">05 — Case Studies</span>
+        <h2 class="section-title">Selected <em class="accent">work.</em></h2>
+        <p style="margin-top: 20px;"><a href="/case-studies/" class="link-arrow">All case studies <span>→</span></a></p>
       </div>
       <div class="case-studies-list">
         
@@ -264,7 +339,7 @@
           <div class="case-study-row-info">
             <span class="case-study-meta">Marketing Automation</span>
             <h3 class="case-study-title">AI Lead Agents &amp; Funnel Optimization</h3>
-            <p class="case-study-desc">Streamlining response systems and qualifies lead lists across dynamic database nodes.</p>
+            <p class="case-study-desc">Faster replies to every enquiry and better-qualified leads through automated follow-up.</p>
             <div class="case-study-stats">
               <div>
                 <div class="case-study-stat-val">24/7</div>
@@ -287,8 +362,8 @@
     <div class="container">
       <div class="testimonial-container">
         <div class="reveal-fade-up" style="margin-bottom: 50px;">
-          <span class="section-label">05 — Testimonials</span>
-          <h2 class="section-title">What our clients think.</h2>
+          <span class="section-label">06 — Testimonials</span>
+          <h2 class="section-title">What our clients <em class="accent">think.</em></h2>
         </div>
         <div class="testimonial-slider reveal-fade-up">
           
@@ -358,81 +433,80 @@
     </div>
   </section>
 
-  <!-- Why Us Section -->
-  <section class="section-muted">
+  <!-- Process -->
+  <section class="section-tint">
     <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-label">06 — Why LLM's Marketing</span>
-        <h2 class="section-title">Strategy that works beyond the search bar.</h2>
+      <div class="section-head-split reveal-fade-up">
+        <div>
+          <span class="section-label">07 — Process</span>
+          <h2 class="section-title">From audit to <em class="accent">booked calls.</em></h2>
+        </div>
+        <p>A simple, repeatable process. You always know what we are working on and what it is for.</p>
       </div>
-      <div class="why-us-grid">
-        
-        <div class="why-us-card reveal-fade-up">
-          <div class="why-us-num">01</div>
-          <h3 class="why-us-title">AI-native thinking</h3>
-          <p class="why-us-desc">We structure campaigns around entity connections and Large Language Model retrieval graphs, rather than old search indexes.</p>
-        </div>
-
-        <div class="why-us-card reveal-fade-up stagger-1">
-          <div class="why-us-num">02</div>
-          <h3 class="why-us-title">Search + content + authority</h3>
-          <p class="why-us-desc">We treat SEO as a unified authority engine, optimizing semantic signals and content clarity in sync.</p>
-        </div>
-
-        <div class="why-us-card reveal-fade-up stagger-2">
-          <div class="why-us-num">03</div>
-          <h3 class="why-us-title">Automation that scales</h3>
-          <p class="why-us-desc">We integrate smart lead capture databases and agents to minimize operational friction and maximize inbound metrics.</p>
-        </div>
-
-        <div class="why-us-card reveal-fade-up stagger-3">
-          <div class="why-us-num">04</div>
-          <h3 class="why-us-title">Measured by outcomes</h3>
-          <p class="why-us-desc">We optimize for high-intent inquiries and conversions, ignoring vanity stats and focus on real growth values.</p>
-        </div>
-
-      </div>
+      <ol class="process-list">
+        <li class="process-step reveal-fade-up">
+          <div>
+            <span class="process-num">01</span>
+            <h3>Discover</h3>
+          </div>
+          <div class="process-card">
+            <p>We review your website, your competitors and how AI platforms currently describe your brand.</p>
+            <div class="process-output"><span>Output</span>A visibility audit and a prioritized list of opportunities</div>
+          </div>
+        </li>
+        <li class="process-step reveal-fade-up">
+          <div>
+            <span class="process-num">02</span>
+            <h3>Plan</h3>
+          </div>
+          <div class="process-card">
+            <p>We agree on the pages, content, fixes and automations most likely to bring in qualified leads.</p>
+            <div class="process-output"><span>Output</span>A written roadmap with priorities and owners</div>
+          </div>
+        </li>
+        <li class="process-step reveal-fade-up">
+          <div>
+            <span class="process-num">03</span>
+            <h3>Build</h3>
+          </div>
+          <div class="process-card">
+            <p>We fix technical issues, publish content, earn trusted mentions and set up lead follow-up.</p>
+            <div class="process-output"><span>Output</span>Live improvements on your site and in your funnel</div>
+          </div>
+        </li>
+        <li class="process-step reveal-fade-up">
+          <div>
+            <span class="process-num">04</span>
+            <h3>Measure</h3>
+          </div>
+          <div class="process-card">
+            <p>We track rankings, AI mentions, traffic and leads every month, and adjust what is not working.</p>
+            <div class="process-output"><span>Output</span>A plain-language monthly report</div>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- Process Timeline Section -->
+  <!-- Founder -->
   <section class="section-white">
     <div class="container">
-      <div class="section-header reveal-fade-up" style="text-align: center; margin: 0 auto 60px;">
-        <span class="section-label">07 — Process</span>
-        <h2 class="section-title">Our Growth Roadmap</h2>
+      <div class="section-header reveal-fade-up">
+        <span class="section-label">08 — Who You Work With</span>
+        <h2 class="section-title">Work directly with <em class="accent">the founder.</em></h2>
       </div>
-      
-      <div class="timeline">
-        
-        <div class="timeline-item reveal-fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-num">01 — Discover</div>
-          <h3 class="timeline-title">Understand your business, audience and market</h3>
-          <p>We analyze current branding metrics, technical search assets, and map how search engine crawls and AI platform models interact with your site.</p>
+      <div class="founder-card reveal-fade-up">
+        <span class="author-avatar" aria-hidden="true">MAK</span>
+        <div>
+          <h3>Mohd Adil Kazmi</h3>
+          <p class="founder-role">Founder, LLM's Marketing · SEO specialist, 6+ years</p>
+          <p>Mohd Adil Kazmi has spent more than six years running SEO experiments: testing how changes to content, site structure, internal links and structured data affect rankings, and now how brands appear in AI answers.</p>
+          <p>That testing mindset shapes every client plan at LLM's Marketing. Recommendations are based on what can be measured, not on guesswork.</p>
+          <div class="founder-links">
+            <a href="/author/mohd-adil-kazmi/" class="link-arrow">Full profile <span>→</span></a>
+            <a href="https://www.linkedin.com/in/best-seo-provider/" class="link-arrow" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+          </div>
         </div>
-
-        <div class="timeline-item reveal-fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-num">02 — Strategize</div>
-          <h3 class="timeline-title">Build the AI visibility and growth roadmap</h3>
-          <p>We detail custom schema layers, structured entity positioning, and configure conversational agents for optimization goals.</p>
-        </div>
-
-        <div class="timeline-item reveal-fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-num">03 — Execute</div>
-          <h3 class="timeline-title">Content, SEO, authority, automation and AI systems</h3>
-          <p>We deploy high-clarity copy structures, implement internal links, launch automated integrations, and calibrate outreach cycles.</p>
-        </div>
-
-        <div class="timeline-item reveal-fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-num">04 — Optimize</div>
-          <h3 class="timeline-title">Measure results and continuously improve</h3>
-          <p>We audit query recommendations, track conversion pipelines, and adjust system models to align with new engine releases.</p>
-        </div>
-
       </div>
     </div>
   </section>
@@ -441,7 +515,7 @@
   <section class="section" id="faq">
     <div class="container">
       <div class="section-header reveal-fade-up" style="text-align: center; margin: 0 auto 60px;">
-        <span class="section-label">08 — FAQ</span>
+        <span class="section-label">09 — FAQ</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
       </div>
       <div class="faq-list">
@@ -538,11 +612,10 @@
   <section class="section-contrast final-cta">
     <div class="container">
       <div class="final-cta-content reveal-fade-up">
-        <h2>Ready to upgrade your search footprint?</h2>
+        <h2>Ready to be the brand <em class="accent">AI recommends?</em></h2>
         <p>Let's build a search strategy designed for humans, search engines and AI.</p>
         <div class="final-cta-actions">
-          <a href="https://calendly.com/adilkazmi/book-a-demo-call" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Strategy Call ↗</a>
-          <a href="/contact/" class="btn btn-secondary">Start a Conversation</a>
+          <a href="/book-a-call/" class="btn btn-primary">Book a discovery call</a>
         </div>
         <form class="homepage-contact-form" action="https://formsubmit.co/digitalkazmi@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New LLM's Marketing website enquiry">
@@ -564,8 +637,8 @@
               <textarea id="homepage-message" name="message" placeholder="How can we help?" autocomplete="off" required></textarea>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary homepage-contact-submit">Send Enquiry ↗</button>
-          <p class="homepage-contact-note">We’ll reply to your email within one business day.</p>
+          <button type="submit" class="btn btn-primary homepage-contact-submit">Send message</button>
+          <p class="homepage-contact-note">We’ll reply to your email within one business day. You will speak with Mohd Adil Kazmi directly, not a sales rep.</p>
         </form>
       </div>
     </div>
@@ -574,47 +647,45 @@
   <!-- Footer Section -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid--4">
         <div class="footer-brand">
           <a href="/" class="logo">LLM’s Marketing<span class="logo-dot"></span></a>
-          <p>Optimizing brands for traditional search and next-generation AI discovery engines.</p>
+          <p>AI SEO and LLM optimization agency helping brands get found on Google and recommended by ChatGPT, Perplexity, Gemini and Claude.</p>
         </div>
         <div>
           <h4 class="footer-title">Services</h4>
           <ul class="footer-links">
-            <li><a href="/our-services/#ai-visibility">AI Search Visibility</a></li>
-            <li><a href="/services/digital-strategy-marketing/">SEO &amp; Content</a></li>
-            <li><a href="/our-services/#lead-agents">AI Lead Agents</a></li>
-            <li><a href="/our-services/#automation">Automation Systems</a></li>
+            <li><a href="/services/ai-search-visibility/">AI Search Visibility</a></li>
+            <li><a href="/services/ai-seo/">AI SEO &amp; Content</a></li>
+            <li><a href="/services/ai-lead-agents/">AI Lead Agents</a></li>
+            <li><a href="/services/marketing-automation/">Marketing Automation</a></li>
+            <li><a href="/services/email-marketing/">Email Marketing</a></li>
+            <li><a href="/our-services/">All services</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-title">Company</h4>
           <ul class="footer-links">
-            <li><a href="/about-us/">About Us</a></li>
-            <li><a href="/blog/">Blog &amp; Insights</a></li>
-            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/about-us/">About us</a></li>
+            <li><a href="/our-approach/">Our approach</a></li>
+            <li><a href="/author/mohd-adil-kazmi/">Our founder</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Blog &amp; insights</a></li>
+            <li><a href="/contact/">Contact us</a></li>
+            <li><a href="/privacy-policy/">Privacy policy</a></li>
           </ul>
         </div>
         <div class="footer-contact">
           <h4 class="footer-title">Connect</h4>
           <p>Email: <a href="mailto:info@llmsmarketing.com">info@llmsmarketing.com</a></p>
           <p>Address: 165 Madison Avenue, NYC</p>
+          <p><a href="/book-a-call/">Book a discovery call →</a></p>
         </div>
       </div>
       <div class="footer-bottom">
         <span class="footer-copy">© 2026 LLM's Marketing. All Rights Reserved.</span>
         <div class="footer-socials">
-          <a href="https://www.linkedin.com/company/llms-marketing/" class="linkedin-link" aria-label="LLM's Marketing on LinkedIn" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M4.7 3.4A2.3 2.3 0 1 1 0 3.4a2.3 2.3 0 0 1 4.7 0ZM.3 8h4.4v14H.3V8Zm7.1 0h4.2v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V22h-4.4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V22H7.4V8Z"/>
-            </svg>
-          </a>
-          <a href="https://wa.me/919540730844" class="whatsapp-link" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4Zm-8.4 18.2h-.1c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.8 1 1-3.7-.2-.4a9.9 9.9 0 0 1-1.5-5.3C2.2 6.3 6.6 1.9 12.1 1.9c2.7 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.5-4.4 9.9-9.9 9.9Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6 0 1.5 1.1 3 1.2 3.2.2.2 2.1 3.3 5.2 4.6 1.9.8 2.6.9 3.6.8.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.4-.2-.7-.3Z"/>
-            </svg>
-          </a>
+          <a href="https://www.linkedin.com/company/llms-marketing/" class="linkedin-link" aria-label="LLM's Marketing on LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.7 3.4A2.3 2.3 0 1 1 0 3.4a2.3 2.3 0 0 1 4.7 0ZM.3 8h4.4v14H.3V8Zm7.1 0h4.2v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V22h-4.4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V22H7.4V8Z"/></svg></a>
         </div>
       </div>
     </div>
