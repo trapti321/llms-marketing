@@ -81,8 +81,10 @@ function initScrollReveals() {
    4. Metrics Counter Animations
    ========================================================================== */
 function initCounters() {
+  // Final values are in the HTML for crawlers; the count-up is visual only.
   const counters = document.querySelectorAll('.metric-number');
   if (counters.length === 0) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const runCounter = (el) => {
     const targetText = el.getAttribute('data-target') || el.innerText;
