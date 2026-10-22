@@ -15,6 +15,7 @@ export default defineConfig({
         blogPost4: resolve(__dirname, 'blog/how-to-get-your-brand-recommended-by-chatgpt/index.html'),
         blogPost5: resolve(__dirname, 'blog/geo-vs-seo/index.html'),
         blogPost6: resolve(__dirname, 'blog/schema-entity-optimization-llms/index.html'),
+        authorAdil: resolve(__dirname, 'author/mohd-adil-kazmi/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
         digitalStrategy: resolve(__dirname, 'services/digital-strategy-marketing/index.html'),
         thankYou: resolve(__dirname, 'thank-you/index.html')

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaq();
   initAISimulator();
   initHeroCanvas();
+  initShareCopy();
 });
 
 /* ==========================================================================
@@ -431,4 +432,25 @@ function initHeroCanvas() {
   canvas.addEventListener('mouseleave', handleMouseLeave);
 
   animate();
+}
+
+/* ==========================================================================
+   Share Bar: Copy Link
+   ========================================================================== */
+function initShareCopy() {
+  document.querySelectorAll('.share-copy').forEach(button => {
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(button.dataset.url || window.location.href);
+      } catch {
+        return;
+      }
+      button.classList.add('is-copied');
+      button.setAttribute('title', 'Link copied');
+      setTimeout(() => {
+        button.classList.remove('is-copied');
+        button.setAttribute('title', 'Copy link');
+      }, 2000);
+    });
+  });
 }
