@@ -13,7 +13,36 @@ document.addEventListener('DOMContentLoaded', () => {
   initAISimulator();
   initHeroCanvas();
   initShareCopy();
+  initLeadTracking();
 });
+
+/* ==========================================================================
+   GA4 Lead Tracking
+   ========================================================================== */
+function initLeadTracking() {
+  const track = (formName) => {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'generate_lead', {
+      form_name: formName,
+      page_path: window.location.pathname,
+      transport_type: 'beacon'
+    });
+  };
+
+  document.querySelectorAll('form[action*="formsubmit.co"]').forEach(form => {
+    const formName = form.classList.contains('lead-form') ? 'ai_audit'
+      : form.classList.contains('homepage-contact-form') ? 'homepage_contact'
+      : 'contact';
+    form.addEventListener('submit', () => track(formName));
+  });
+
+  // Calendly bookings on /book-a-call/
+  window.addEventListener('message', (event) => {
+    if (event.origin === 'https://calendly.com' && event.data?.event === 'calendly.event_scheduled') {
+      track('calendly_booking');
+    }
+  });
+}
 
 /* ==========================================================================
    1. Header Scroll Effect
