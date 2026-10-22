@@ -2351,6 +2351,123 @@ textarea.form-control {
     font-size: 0.9rem;
     line-height: 1.5;
   }
+
+  .post-toc details {
+    scrollbar-width: thin;
+  }
+
+  .post-rail {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 260px;
+  }
+}
+
+/* Right rail on posts: CTA + more articles, only where there is room */
+@media (max-width: 1359px) {
+  .post-rail {
+    display: none;
+  }
+}
+
+.post-rail-inner {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rail-card {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background-color: var(--surface);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.rail-cta {
+  border-color: var(--accent);
+  border-style: dashed;
+}
+
+.post-body .rail-card p {
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.rail-eyebrow,
+.rail-heading {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.post-body .rail-card .rail-heading {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.post-body .rail-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.post-body a.rail-btn {
+  display: block;
+  width: 100%;
+  margin: 4px 0 12px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--background);
+}
+
+.post-body a.rail-btn:hover {
+  color: var(--text-primary);
+}
+
+.post-body a.rail-link {
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.post-body ul.rail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-body .rail-list li {
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.post-body .rail-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.post-body .rail-list a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.post-body .rail-list a:hover {
+  color: var(--accent);
 }
 
 .author-box {
@@ -3641,4 +3758,115 @@ textarea.form-control {
   margin-right: 8px;
   font-weight: 600;
   color: var(--text-primary);
+}
+
+/* Mobile and tablet hardening */
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+.blog-grid > *,
+.svc-hero-grid > *,
+.process-step > * {
+  min-width: 0;
+}
+
+.post-body,
+.post-header h1,
+.page-header h1,
+.svc-hero h1 {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 16px stops iOS Safari zooming into form fields */
+  .form-control,
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .post-title { font-size: 1.75rem; }
+  .post-body h2 { font-size: 1.6rem; }
+  .post-body h3 { font-size: 1.3rem; }
+
+  .social-proof-title,
+  .ai-cited,
+  .ai-answer-head span,
+  .process-output span,
+  .compare-table thead th,
+  .related-links small {
+    font-size: 0.75rem;
+  }
+
+  /* Bigger touch targets */
+  .slider-dot {
+    height: 2px;
+    padding: 0;
+    background-clip: content-box;
+    box-sizing: content-box;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+  }
+
+  .linkedin-link {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .faq-trigger {
+    min-height: 44px;
+  }
+
+  .footer-links a,
+  .crumbs a {
+    display: inline-block;
+    padding: 6px 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .post-detail-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .post-header h1 { font-size: 2.1rem; }
+  .page-header h1,
+  .svc-hero h1 { font-size: 2.4rem; }
+  .hero-headline { font-size: 2.3rem; }
+  .section-title,
+  .intro-large-text { font-size: 2rem; }
+
+  .sidebar-widget { padding: 24px; }
+  .process-step { padding-left: 48px; }
+  .process-step::before { width: 32px; height: 32px; }
+  .process-card { padding: 22px 20px; }
+  .process-output { grid-template-columns: 1fr; gap: 4px; }
+
+  .calendly-inline-widget { min-width: 0; }
 }
