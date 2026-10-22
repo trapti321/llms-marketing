@@ -2629,3 +2629,52 @@ textarea.form-control {
     font-size: 1.45rem;
   }
 }
+
+/* Service page: results and CTA blocks */
+.service-results {
+  margin-bottom: 28px;
+  padding: 28px 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background-color: var(--surface);
+}
+
+.post-body .service-results p {
+  margin-bottom: 8px;
+}
+
+.post-body .service-results-metric {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.service-cta {
+  margin-top: 56px;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: var(--dark-section);
+  text-align: center;
+}
+
+.post-body .service-cta h2 {
+  margin: 0 0 12px;
+  color: var(--dark-text);
+}
+
+.post-body .service-cta p {
+  margin-bottom: 24px;
+  color: var(--dark-text-muted);
+}
+
+.post-body .service-cta .btn {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.post-body .service-cta .btn:hover {
+  background-color: var(--accent);
+  color: var(--dark-text);
+}
