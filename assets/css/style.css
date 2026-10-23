@@ -4054,3 +4054,22 @@ video {
   .cs-case { padding-bottom: 56px; margin-bottom: 56px; }
   .cs-jump { margin-bottom: 48px; }
 }
+
+.cs-sub {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px dashed var(--border);
+  scroll-margin-top: 110px;
+}
+
+.cs-subtitle {
+  margin-bottom: 14px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .cs-subtitle { font-size: 1.4rem; }
+}
