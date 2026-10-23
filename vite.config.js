@@ -13,6 +13,7 @@ export default defineConfig({
         blogPost3: resolve(__dirname, 'blog/ai-search-visibility-how-to-show-up-in-chatgpt-perplexity-and-gemini/index.html'),
         blogPost4: resolve(__dirname, 'blog/how-to-get-your-brand-recommended-by-chatgpt/index.html'),
         blogPost5: resolve(__dirname, 'blog/geo-vs-seo/index.html'),
+        blogPost7: resolve(__dirname, 'blog/what-is-llm-marketing/index.html'),
         blogPost6: resolve(__dirname, 'blog/schema-entity-optimization-llms/index.html'),
         authorAdil: resolve(__dirname, 'author/mohd-adil-kazmi/index.html'),
         ServicesAiSearchVisibility: resolve(__dirname, 'services/ai-search-visibility/index.html'),
