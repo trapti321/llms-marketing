@@ -2315,21 +2315,34 @@ textarea.form-control {
   color: var(--accent);
 }
 
-/* Wide screens: TOC sits in the empty left margin and follows the reader */
-@media (min-width: 1360px) {
-  .post-body {
+/* Wide screens: three columns. TOC left, article centre, CTA + related posts right.
+   Both rails start beside the title and stay in view while reading. */
+@media (min-width: 1180px) {
+  .post-detail-container:has(.post-toc) {
     position: relative;
+    max-width: 1400px;
+    padding-left: 288px;
+    padding-right: 288px;
+  }
+
+  .post-toc,
+  .post-rail {
+    position: absolute;
+    top: 160px;
+    bottom: 100px;
+    width: 236px;
+    margin: 0;
   }
 
   .post-toc {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -300px;
-    width: 260px;
-    margin: 0;
+    left: 24px;
     border: 0;
     background: none;
+  }
+
+  .post-rail {
+    display: block;
+    right: 24px;
   }
 
   .post-toc details {
@@ -2337,6 +2350,7 @@ textarea.form-control {
     top: 120px;
     max-height: calc(100vh - 140px);
     overflow-y: auto;
+    scrollbar-width: thin;
     border: 1px solid var(--border);
     border-radius: 12px;
     background-color: var(--surface);
@@ -2347,27 +2361,29 @@ textarea.form-control {
   }
 
   .post-toc ol {
-    padding: 0 20px 18px 38px;
-    font-size: 0.9rem;
+    padding: 0 18px 18px 36px;
+    font-size: 0.88rem;
     line-height: 1.5;
   }
 
-  .post-toc details {
-    scrollbar-width: thin;
-  }
-
-  .post-rail {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -300px;
-    width: 260px;
+  .post-header h1 {
+    font-size: 2.9rem;
   }
 }
 
-/* Right rail on posts: CTA + more articles, only where there is room */
-@media (max-width: 1359px) {
+@media (min-width: 1440px) {
+  .post-detail-container:has(.post-toc) {
+    padding-left: 320px;
+    padding-right: 320px;
+  }
+
+  .post-toc,
+  .post-rail {
+    width: 264px;
+  }
+}
+
+@media (max-width: 1179px) {
   .post-rail {
     display: none;
   }
