@@ -36,7 +36,6 @@ llms-marketing/
 │   ├── index.html            # Insights listing page
 │   ├── seo-is-changing-how-ai-platforms-like-chatgpt-are-redefining-search-visibility/
 │   │   └── index.html        # First blog post detailed reading layout
-│   └── what-is-llm-marketing-a-complete-guide-to-getting-discovered-on-ai-platforms/
 │       └── index.html        # Second blog post detailed reading layout
 ├── contact/
 │   └── index.html            # Form page preserving original WPForms inputs

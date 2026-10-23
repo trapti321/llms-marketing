@@ -10,7 +10,6 @@ export default defineConfig({
         services: resolve(__dirname, 'our-services/index.html'),
         blog: resolve(__dirname, 'blog/index.html'),
         blogPost1: resolve(__dirname, 'blog/seo-is-changing-how-ai-platforms-like-chatgpt-are-redefining-search-visibility/index.html'),
-        blogPost2: resolve(__dirname, 'blog/what-is-llm-marketing-a-complete-guide-to-getting-discovered-on-ai-platforms/index.html'),
         blogPost3: resolve(__dirname, 'blog/ai-search-visibility-how-to-show-up-in-chatgpt-perplexity-and-gemini/index.html'),
         blogPost4: resolve(__dirname, 'blog/how-to-get-your-brand-recommended-by-chatgpt/index.html'),
         blogPost5: resolve(__dirname, 'blog/geo-vs-seo/index.html'),
