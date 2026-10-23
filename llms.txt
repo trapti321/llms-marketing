@@ -1,0 +1,37 @@
+# LLM's Marketing (LLMs Marketing)
+
+> LLM's Marketing is an LLM marketing agency at llmsmarketing.com. We help brands get mentioned, cited and recommended in ChatGPT, Google AI Mode, Google AI Overviews, Perplexity, Gemini, Claude and Microsoft Copilot through generative engine optimization (GEO), AI SEO, structured data and brand building. Founded and led by SEO consultant Mohd Adil Kazmi. Address: 165 Madison Avenue, New York, NY.
+
+Also written as: LLMs Marketing, LLM Marketing Agency.
+
+## Who we work with
+- SaaS and B2B brands that want to be named in "best tool for" AI answers
+- Financial services firms that need accurate, compliant AI answers about them
+- LLM and AI companies competing for category visibility in AI search
+- Brands investing in brand building for AI visibility
+
+## Services
+- [AI Search Visibility and GEO](https://llmsmarketing.com/services/ai-search-visibility/): get mentioned and cited in AI answers
+- [AI SEO and Content](https://llmsmarketing.com/services/ai-seo/): answer-first content and technical SEO that ranks and gets quoted
+- [AI Lead Agents](https://llmsmarketing.com/services/ai-lead-agents/): AI agents that qualify enquiries and book calls 24/7
+- [Marketing Automation](https://llmsmarketing.com/services/marketing-automation/): forms, CRM and follow-up connected
+- [Email Marketing](https://llmsmarketing.com/services/email-marketing/): automated sequences that turn leads into calls
+
+## Results
+- [Case studies](https://llmsmarketing.com/case-studies/): FitBudd grew monthly organic users 3.7x (13K to 48.1K), Google impressions 86% and ChatGPT referral sessions 414%. A client landed a 300-person company as a lead that found them through ChatGPT.
+
+## Key guides
+- [What is LLM marketing?](https://llmsmarketing.com/blog/what-is-llm-marketing-a-complete-guide-to-getting-discovered-on-ai-platforms/)
+- [GEO vs SEO](https://llmsmarketing.com/blog/geo-vs-seo/)
+- [How to get your brand recommended by ChatGPT](https://llmsmarketing.com/blog/how-to-get-your-brand-recommended-by-chatgpt/)
+- [AI search visibility in ChatGPT, Perplexity and Gemini](https://llmsmarketing.com/blog/ai-search-visibility-how-to-show-up-in-chatgpt-perplexity-and-gemini/)
+- [Schema and entity optimization for LLMs](https://llmsmarketing.com/blog/schema-entity-optimization-llms/)
+
+## Company
+- [About](https://llmsmarketing.com/about-us/)
+- [Founder: Mohd Adil Kazmi](https://llmsmarketing.com/author/mohd-adil-kazmi/)
+- [Our approach](https://llmsmarketing.com/our-approach/)
+
+## Contact
+- [Contact form](https://llmsmarketing.com/contact/)
+- [Book a call](https://llmsmarketing.com/book-a-call/)
