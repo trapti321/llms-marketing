@@ -4096,3 +4096,60 @@ a.case-study-row {
   object-fit: contain;
   object-position: center;
 }
+
+/* Header CTA: filled accent button with a soft pulse to draw the eye */
+.btn.btn-nav-cta {
+  position: relative;
+  gap: 8px;
+  padding: 12px 22px;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(47, 128, 237, 0.35);
+}
+
+.btn.btn-nav-cta::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(47, 128, 237, 0.55);
+  animation: nav-cta-pulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+.btn.btn-nav-cta:hover,
+.btn.btn-nav-cta:focus-visible {
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn-nav-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.btn.btn-nav-cta:hover .btn-nav-arrow {
+  transform: translateX(4px);
+}
+
+@keyframes nav-cta-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(47, 128, 237, 0.55); }
+  70% { box-shadow: 0 0 0 12px rgba(47, 128, 237, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(47, 128, 237, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn.btn-nav-cta::after { animation: none; }
+}
+
+/* Mobile menu sits on a light panel: keep the active and hovered links readable */
+@media (max-width: 768px) {
+  .nav-menu .nav-link.active,
+  .nav-menu .nav-link:hover {
+    color: var(--text-primary);
+  }
+}
