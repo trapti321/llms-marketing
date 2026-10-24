@@ -1937,6 +1937,12 @@ textarea.form-control {
   border: 1px solid rgba(239, 68, 68, 0.15);
 }
 
+.form-notification a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* Mobile responsive navigation styles */
 .mobile-nav-active {
   overflow: hidden;
