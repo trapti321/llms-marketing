@@ -4159,3 +4159,22 @@ a.case-study-row {
     color: var(--text-primary);
   }
 }
+
+/* In-article images on blog posts */
+.post-figure {
+  margin: 8px 0 36px;
+}
+
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.post-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
