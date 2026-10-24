@@ -136,7 +136,7 @@ function submitLeadForm(form, onSuccess) {
 
 // Optional second delivery service. Paste a Web3Forms access key here to send
 // blocked submissions silently; while empty, the visitor's email app is used.
-const WEB3FORMS_KEY = '';
+const WEB3FORMS_KEY = 'a9755fc0-bc97-4551-950d-7ba1f0a9bfdb';
 const LEAD_INBOX = 'digitalkazmi@gmail.com';
 
 function withParam(url, key, value) {
