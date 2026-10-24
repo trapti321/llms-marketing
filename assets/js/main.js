@@ -101,13 +101,70 @@ function submitLeadForm(form, onSuccess) {
       HTMLFormElement.prototype.submit.call(form);
     })
     .catch(() => {
-      // Network-level failure: the form service is blocked or unreachable.
-      reset();
-      note.className = 'form-notification error';
-      note.innerHTML = 'Your message could not be sent. A VPN, ad blocker or network filter seems to be blocking our form service. ' +
-        `Please <a href="${BOOKING_URL}" target="_blank" rel="noopener">book a call here</a> instead, or turn off the VPN/blocker and press send again. Your details are still filled in.`;
-      note.style.display = 'block';
+      // Network-level failure: formsubmit.co is blocked or unreachable.
+      sendViaFallback(form)
+        .then(via => {
+          onSuccess();
+          if (via === 'email') {
+            note.className = 'form-notification success';
+            note.textContent = 'Your email app is opening with your message ready. Press Send there to reach us.';
+            note.style.display = 'block';
+            setTimeout(() => { window.location.href = withParam(nextUrl, 'via', 'email'); }, 2500);
+          } else {
+            window.location.href = nextUrl;
+          }
+        })
+        .catch(() => {
+          reset();
+          note.className = 'form-notification error';
+          note.innerHTML = 'Your message could not be sent. A VPN, ad blocker or network filter seems to be blocking our form service. ' +
+            `Please <a href="${BOOKING_URL}" target="_blank" rel="noopener">book a call here</a> instead. Your details are still filled in.`;
+          note.style.display = 'block';
+        });
     });
+}
+
+// Optional second delivery service. Paste a Web3Forms access key here to send
+// blocked submissions silently; while empty, the visitor's email app is used.
+const WEB3FORMS_KEY = '';
+const LEAD_INBOX = 'digitalkazmi@gmail.com';
+
+function withParam(url, key, value) {
+  const u = new URL(url, window.location.origin);
+  u.searchParams.set(key, value);
+  return u.toString();
+}
+
+function leadFields(form) {
+  const fields = {};
+  new FormData(form).forEach((value, key) => {
+    if (!key.startsWith('_') && String(value).trim()) fields[key] = String(value).trim();
+  });
+  if (!fields.source_page) fields.source_page = window.location.href;
+  return fields;
+}
+
+function sendViaFallback(form) {
+  const subject = form.querySelector('input[name="_subject"]')?.value || "New LLM's Marketing enquiry";
+  const fields = leadFields(form);
+  if (form.querySelector('input[name="_honey"]')?.value) return Promise.resolve('spam');
+
+  if (WEB3FORMS_KEY) {
+    return fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject, ...fields })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (!data.success) throw new Error('web3forms rejected');
+        return 'web3forms';
+      });
+  }
+
+  const body = Object.entries(fields).map(([k, v]) => `${k.replace(/_/g, ' ')}: ${v}`).join('\n');
+  window.location.href = `mailto:${LEAD_INBOX}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return Promise.resolve('email');
 }
 
 /* ==========================================================================

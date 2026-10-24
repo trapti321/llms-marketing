@@ -49,11 +49,17 @@
     <div class="container reveal-fade-up">
       <span class="section-label">Message received</span>
       <h1>Thank you for reaching out.</h1>
-      <p>Thank you for contacting us. Your details have reached our team. We’ll get back to you within one business day.</p>
+      <p>Thank you for contacting us. Our founder, Mohd Adil Kazmi, will personally reach out to you within one business day.</p>
+      <p id="thank-you-email-note" hidden>If your email app opened with your message, please make sure you pressed Send so it reaches us.</p>
       <a href="/" class="btn btn-primary">Back to Homepage</a>
     </div>
   </main>
 
   <script type="module" src="/assets/js/main.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('via') === 'email') {
+      document.getElementById('thank-you-email-note').hidden = false;
+    }
+  </script>
 </body>
 </html>
