@@ -103,16 +103,26 @@ function submitLeadForm(form, onSuccess) {
     .catch(() => {
       // Network-level failure: formsubmit.co is blocked or unreachable.
       sendViaFallback(form)
-        .then(via => {
-          onSuccess();
-          if (via === 'email') {
-            note.className = 'form-notification success';
-            note.textContent = 'Your email app is opening with your message ready. Press Send there to reach us.';
-            note.style.display = 'block';
-            setTimeout(() => { window.location.href = withParam(nextUrl, 'via', 'email'); }, 2500);
-          } else {
+        .then(result => {
+          if (result.via !== 'email') {
+            onSuccess();
             window.location.href = nextUrl;
+            return;
           }
+          // Nothing is sent until the visitor sends the prepared email, so ask
+          // them to pick a mail client and only then show the thank-you page.
+          reset();
+          note.className = 'form-notification error';
+          note.innerHTML = 'Your network or VPN is blocking our form service, so your message has not been sent yet. ' +
+            'Send it in one click, it is already written for you: ' +
+            `<a href="${result.gmail}" target="_blank" rel="noopener" data-send>Send via Gmail</a> or ` +
+            `<a href="${result.mailto}" data-send>send via your email app</a>. ` +
+            `You can also <a href="${BOOKING_URL}" target="_blank" rel="noopener">book a call</a>.`;
+          note.style.display = 'block';
+          note.querySelectorAll('[data-send]').forEach(link => link.addEventListener('click', () => {
+            onSuccess();
+            setTimeout(() => { window.location.href = withParam(nextUrl, 'via', 'email'); }, 1500);
+          }, { once: true }));
         })
         .catch(() => {
           reset();
@@ -147,7 +157,7 @@ function leadFields(form) {
 function sendViaFallback(form) {
   const subject = form.querySelector('input[name="_subject"]')?.value || "New LLM's Marketing enquiry";
   const fields = leadFields(form);
-  if (form.querySelector('input[name="_honey"]')?.value) return Promise.resolve('spam');
+  if (form.querySelector('input[name="_honey"]')?.value) return Promise.resolve({ via: 'spam' });
 
   if (WEB3FORMS_KEY) {
     return fetch('https://api.web3forms.com/submit', {
@@ -158,13 +168,18 @@ function sendViaFallback(form) {
       .then(res => res.json())
       .then(data => {
         if (!data.success) throw new Error('web3forms rejected');
-        return 'web3forms';
+        return { via: 'web3forms' };
       });
   }
 
   const body = Object.entries(fields).map(([k, v]) => `${k.replace(/_/g, ' ')}: ${v}`).join('\n');
-  window.location.href = `mailto:${LEAD_INBOX}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  return Promise.resolve('email');
+  const su = encodeURIComponent(subject);
+  const bd = encodeURIComponent(body);
+  return Promise.resolve({
+    via: 'email',
+    mailto: `mailto:${LEAD_INBOX}?subject=${su}&body=${bd}`,
+    gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${LEAD_INBOX}&su=${su}&body=${bd}`
+  });
 }
 
 /* ==========================================================================
