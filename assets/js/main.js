@@ -33,7 +33,11 @@ function initLeadTracking() {
     const formName = form.classList.contains('lead-form') ? 'ai_audit'
       : form.classList.contains('homepage-contact-form') ? 'homepage_contact'
       : 'contact';
-    form.addEventListener('submit', () => track(formName));
+    form.addEventListener('submit', (event) => {
+      if (event.defaultPrevented) return; // page-level validation already stopped it
+      event.preventDefault();
+      submitLeadForm(form, () => track(formName));
+    });
   });
 
   // Calendly bookings on /book-a-call/
@@ -42,6 +46,68 @@ function initLeadTracking() {
       track('calendly_booking');
     }
   });
+}
+
+/* ==========================================================================
+   Lead Form Submission
+   Sends via FormSubmit's AJAX endpoint so a visitor whose VPN or DNS filter
+   blocks formsubmit.co stays on the page with their input intact and gets a
+   booking link, instead of landing on a browser error page.
+   ========================================================================== */
+const BOOKING_URL = 'https://calendly.com/adilkazmi/book-a-demo-call';
+
+function submitLeadForm(form, onSuccess) {
+  const button = form.querySelector('[type="submit"]');
+  const buttonText = button?.textContent;
+  const nextUrl = form.querySelector('input[name="_next"]')?.value || '/thank-you/';
+  const ajaxUrl = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+  let note = form.querySelector('.form-notification');
+  if (!note) {
+    note = document.createElement('p');
+    note.className = 'form-notification';
+    note.setAttribute('aria-live', 'polite');
+    form.appendChild(note);
+  }
+  note.style.display = 'none';
+
+  if (button) {
+    button.disabled = true;
+    button.textContent = 'Sending…';
+  }
+
+  const reset = () => {
+    if (button) {
+      button.disabled = false;
+      button.textContent = buttonText;
+    }
+  };
+
+  fetch(ajaxUrl, {
+    method: 'POST',
+    headers: { Accept: 'application/json' },
+    body: new FormData(form)
+  })
+    .then(res => res.json().catch(() => ({})).then(data => ({ ok: res.ok, data })))
+    .then(({ ok, data }) => {
+      if (ok && String(data.success) === 'true') {
+        onSuccess();
+        window.location.href = nextUrl;
+        return;
+      }
+      // Service reachable but returned something unexpected: fall back to the
+      // classic post so FormSubmit can show its own page.
+      reset();
+      HTMLFormElement.prototype.submit.call(form);
+    })
+    .catch(() => {
+      // Network-level failure: the form service is blocked or unreachable.
+      reset();
+      note.className = 'form-notification error';
+      note.innerHTML = 'Your message could not be sent. A VPN, ad blocker or network filter seems to be blocking our form service. ' +
+        `Please <a href="${BOOKING_URL}" target="_blank" rel="noopener">book a call here</a> instead, or turn off the VPN/blocker and press send again. Your details are still filled in.`;
+      note.style.display = 'block';
+    });
 }
 
 /* ==========================================================================
