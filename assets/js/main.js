@@ -159,27 +159,28 @@ function sendViaFallback(form) {
   const fields = leadFields(form);
   if (form.querySelector('input[name="_honey"]')?.value) return Promise.resolve({ via: 'spam' });
 
-  if (WEB3FORMS_KEY) {
-    return fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject, ...fields })
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (!data.success) throw new Error('web3forms rejected');
-        return { via: 'web3forms' };
-      });
-  }
-
   const body = Object.entries(fields).map(([k, v]) => `${k.replace(/_/g, ' ')}: ${v}`).join('\n');
   const su = encodeURIComponent(subject);
   const bd = encodeURIComponent(body);
-  return Promise.resolve({
+  const emailLinks = {
     via: 'email',
     mailto: `mailto:${LEAD_INBOX}?subject=${su}&body=${bd}`,
     gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${LEAD_INBOX}&su=${su}&body=${bd}`
-  });
+  };
+
+  if (!WEB3FORMS_KEY) return Promise.resolve(emailLinks);
+
+  return fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject, ...fields })
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (!data.success) throw new Error('web3forms rejected');
+      return { via: 'web3forms' };
+    })
+    .catch(() => emailLinks); // both services blocked: let the visitor send it themselves
 }
 
 /* ==========================================================================
