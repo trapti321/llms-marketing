@@ -23,6 +23,7 @@ export default defineConfig({
         authorAdil: resolve(__dirname, 'author/mohd-adil-kazmi/index.html'),
         ServicesAiSearchVisibility: resolve(__dirname, 'services/ai-search-visibility/index.html'),
         ServicesAiSeo: resolve(__dirname, 'services/ai-seo/index.html'),
+        personalInjurySeo: resolve(__dirname, 'personal-injury-seo/index.html'),
         dentalSeoCypress: resolve(__dirname, 'dental-seo-cypress-tx/index.html'),
         seoCompanyCypress: resolve(__dirname, 'seo-company-cypress-tx/index.html'),
         ServicesAiLeadAgents: resolve(__dirname, 'services/ai-lead-agents/index.html'),
