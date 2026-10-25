@@ -3942,6 +3942,10 @@ video {
   background-color: var(--surface);
 }
 
+.cs-stats--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .cs-stats > div {
   padding: 22px 24px;
   border-left: 1px solid var(--border);
