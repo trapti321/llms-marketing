@@ -561,6 +561,63 @@ a {
   color: var(--text-primary);
 }
 
+/* Client partner spotlight (Authority.inc) */
+.partner-spotlight {
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.partner-spotlight-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 26px;
+}
+
+.partner-spotlight-label a,
+.partner-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.partner-strip {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 52px;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.partner-strip li {
+  color: #bf8c17;
+  background: linear-gradient(90deg, #a87a12, #d9ad4f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.partner-strip .pw-sans { font-family: var(--font-body); font-weight: 500; letter-spacing: -0.01em; }
+.partner-strip .pw-serif { font-family: var(--font-heading); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; font-size: 1.5rem; }
+.partner-strip .pw-bold { font-family: var(--font-body); font-weight: 700; letter-spacing: -0.02em; font-size: 1.5rem; }
+
+.partner-note {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 /* 10. Intro / Positioning Section */
 .intro-grid {
   display: grid;
