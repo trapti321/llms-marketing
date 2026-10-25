@@ -30,7 +30,8 @@ function initLeadTracking() {
   };
 
   document.querySelectorAll('form[action*="formsubmit.co"]').forEach(form => {
-    const formName = form.classList.contains('lead-form') ? 'ai_audit'
+    const formName = form.dataset.formName ? form.dataset.formName
+      : form.classList.contains('lead-form') ? 'ai_audit'
       : form.classList.contains('homepage-contact-form') ? 'homepage_contact'
       : 'contact';
     form.addEventListener('submit', (event) => {
