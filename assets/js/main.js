@@ -222,6 +222,30 @@ function initMobileMenu() {
       document.body.classList.remove('mobile-nav-active');
     });
   });
+
+  // Dropdowns: the chevron button toggles its menu (hover/focus also opens it on desktop)
+  const items = navMenu.querySelectorAll('.nav-item.has-dropdown');
+  const closeAll = (except) => items.forEach(item => {
+    if (item === except) return;
+    item.classList.remove('open');
+    item.querySelector('.nav-dd-toggle')?.setAttribute('aria-expanded', 'false');
+  });
+  items.forEach(item => {
+    const toggle = item.querySelector('.nav-dd-toggle');
+    toggle?.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const open = !item.classList.contains('open');
+      closeAll(item);
+      item.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', (event) => {
+    if (!navMenu.contains(event.target)) closeAll();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeAll();
+  });
 }
 
 /* ==========================================================================
