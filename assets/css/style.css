@@ -3698,7 +3698,7 @@ textarea.form-control {
 
 .related-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
@@ -4436,4 +4436,73 @@ a.case-study-row {
   .nav-dd-link { padding: 8px 14px; }
   .nav-dd-link span { display: none; }
   .nav-dd-all { border-top: 0; padding: 8px 14px; }
+}
+
+/* ---------- Silo architecture: post breadcrumbs and "More on" block ---------- */
+.post-crumbs {
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+}
+
+.post-header .post-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-header .post-meta a:hover {
+  text-decoration: underline;
+}
+
+.silo-nav {
+  margin: 48px 0 40px;
+  padding: 28px 30px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background-color: var(--surface);
+}
+
+.post-body .silo-nav h2 {
+  margin: 4px 0 16px;
+  font-size: 1.5rem;
+}
+
+.silo-nav h2 a {
+  color: inherit;
+}
+
+.silo-eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent, #2f80ed);
+}
+
+.post-body .silo-list {
+  margin: 0 0 18px;
+  padding-left: 20px;
+}
+
+.post-body .silo-list li {
+  margin-bottom: 8px;
+}
+
+.post-body .silo-links {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.silo-links span {
+  font-weight: 600;
+}
+
+.silo-all {
+  font-weight: 600;
+}
+
+/* Let grid columns shrink so wide tables scroll inside .post-table-wrap instead of widening the page */
+.split-intro > *,
+.svc-hero-grid > * {
+  min-width: 0;
 }
