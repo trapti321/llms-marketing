@@ -18,6 +18,7 @@ export default defineConfig({
         blogPost14: resolve(__dirname, 'blog/google-ads-vs-seo-for-dentists/index.html'),
         blogPost15: resolve(__dirname, 'blog/daycare-seo/index.html'),
         blogPost16: resolve(__dirname, 'blog/seo-for-yoga-studios/index.html'),
+        blogPost17: resolve(__dirname, 'blog/seo-for-locksmiths/index.html'),
         blogPost11: resolve(__dirname, 'blog/seo-for-gyms/index.html'),
         blogPost10: resolve(__dirname, 'blog/generative-engine-optimization-for-dentists/index.html'),
         blogPost9: resolve(__dirname, 'blog/local-seo-for-ecommerce/index.html'),
