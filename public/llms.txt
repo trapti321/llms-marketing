@@ -27,6 +27,7 @@ Also written as: LLMs Marketing, LLM Marketing Agency.
 - [Case studies](https://llmsmarketing.com/case-studies/): FitBudd grew monthly organic users 3.7x (13K to 48.1K), Google impressions 86% and ChatGPT referral sessions 414%. A client landed a 300-person company as a lead that found them through ChatGPT. Another client reported a 50% increase in page citations and a 100% increase in prompt citation rate in AI answers (October 2026).
 
 ## Key guides
+- [Best LLM for business and marketing in 2026: Claude vs ChatGPT vs Gemini and how to choose](https://llmsmarketing.com/blog/best-llm-for-business-and-marketing/)
 - [SEO for locksmiths: how legitimate locksmiths win local search in a spam-heavy category](https://llmsmarketing.com/blog/seo-for-locksmiths/)
 - [SEO for yoga studios: getting found by new students and filling classes](https://llmsmarketing.com/blog/seo-for-yoga-studios/)
 - [Daycare SEO: how child care centers, preschools and home daycares get found by parents](https://llmsmarketing.com/blog/daycare-seo/)
