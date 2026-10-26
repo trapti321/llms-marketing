@@ -22,6 +22,36 @@
     <link rel="canonical" href="https://llmsmarketing.com/contact/">
   <meta name="description" content="Connect with our AI SEO specialists to discuss your growth goals. We help brands gain visibility and authority across next-generation search experiences.">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://llmsmarketing.com/contact/#webpage",
+    "url": "https://llmsmarketing.com/contact/",
+    "name": "Contact LLM's Marketing",
+    "about": {
+      "@type": "ProfessionalService",
+      "@id": "https://llmsmarketing.com/#organization",
+      "name": "LLM's Marketing",
+      "url": "https://llmsmarketing.com/",
+      "email": "info@llmsmarketing.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "165 Madison Avenue",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@llmsmarketing.com",
+        "url": "https://llmsmarketing.com/contact/",
+        "availableLanguage": "English"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -67,6 +97,11 @@
           <h2 class="section-title" style="font-size: 2.25rem; margin-bottom: 20px;">Let’s start a conversation.</h2>
           <p style="margin-bottom: 30px;">Tell us about your brand challenges, organic visibility goals, and current conversion metrics. We usually respond in under 24 hours.</p>
           
+          <div class="contact-info-item">
+            <span class="contact-info-label">Email</span>
+            <span class="contact-info-value"><a href="mailto:info@llmsmarketing.com">info@llmsmarketing.com</a></span>
+          </div>
+
           <div class="contact-info-item">
             <span class="contact-info-label">Address</span>
             <span class="contact-info-value">165 Madison Avenue, New York City</span>
@@ -151,6 +186,7 @@
         <div class="footer-contact">
           <h4 class="footer-title">Connect</h4>
           <p><a href="/contact/">Send us a message →</a></p>
+          <p>Email: <a href="mailto:info@llmsmarketing.com">info@llmsmarketing.com</a></p>
           <p>Address: 165 Madison Avenue, NYC</p>
           <p><a href="/book-a-call/">Book a discovery call →</a></p>
         </div>
@@ -187,7 +223,7 @@
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
           event.preventDefault();
-          showValidationMessage('Please enter a valid email address so we can reply to you. You can also email digitalkazmi@gmail.com directly.');
+          showValidationMessage('Please enter a valid email address so we can reply to you. You can also email info@llmsmarketing.com directly.');
           emailInput.setCustomValidity('Please enter a valid email address.');
           emailInput.reportValidity();
           return;
