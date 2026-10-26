@@ -31,7 +31,7 @@ SILOS = [
         "slug": "ai-search-geo",
         "name": "AI Search & GEO",
         "title": "AI Search and GEO Guides",
-        "desc": "Guides to generative engine optimization and AI search visibility: how to get your brand mentioned, cited and recommended in ChatGPT, Google AI Mode, Perplexity and Gemini.",
+        "desc": "Guides to generative engine optimization and AI search visibility: get your brand cited and recommended in ChatGPT, Google AI Mode, Perplexity and Gemini.",
         "intro": [
             "Generative engine optimization (GEO) is the work of making your brand easy for AI assistants to find, understand and recommend. These guides explain how ChatGPT, Google AI Mode, Perplexity and Gemini choose what to cite, how GEO relates to traditional SEO, and the practical steps that move visibility.",
             "Start with the pillar guide on LLM marketing, then go deeper into recommendations, AI search visibility, structured data and how search itself is changing. For done-for-you help, see our <a href=\"/services/ai-search-visibility/\">AI search visibility service</a>.",
@@ -67,7 +67,7 @@ SILOS = [
         "slug": "local-industry-seo",
         "name": "Local & Industry SEO",
         "title": "Local and Industry SEO Guides",
-        "desc": "Local and industry SEO guides for gyms, yoga studios, daycares, locksmiths, dentists, law firms and ecommerce: map pack visibility, service pages, reviews and AI answers.",
+        "desc": "Local and industry SEO guides for gyms, yoga studios, daycares, locksmiths, dentists, law firms and ecommerce: map pack, service pages, reviews and AI answers.",
         "intro": [
             "Local and industry SEO decides who gets the call when someone searches nearby or asks an AI assistant for a recommendation. These guides show how specific industries win the map pack, build pages that match how customers search, collect genuine reviews and stay within the rules of their profession.",
             "Each guide uses real search data and official guidelines. For hands-on help in a specific industry, see the <a href=\"/industries/\">industries we work with</a>.",
@@ -272,6 +272,10 @@ def build_hub(silo, infos, template):
 
   <section class="section-white">
     <div class="container">
+      <div class="section-header reveal-fade-up" style="text-align: left; margin-bottom: 16px;">
+        <span class="section-label">All guides</span>
+        <h2 class="section-title">{esc(silo['name'])} <em class="accent">guides.</em></h2>
+      </div>
       <p class="reveal-fade-up" style="max-width: 760px; margin: 0 0 32px;">{silo['intro'][1]}</p>
       <div class="svc-cards">
           <a href="{pillar['url']}" class="svc-card reveal-fade-up">

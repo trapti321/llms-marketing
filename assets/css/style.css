@@ -15,7 +15,7 @@
 
   --text-primary: #171717;
   --text-secondary: #666666;
-  --text-muted: #999999;
+  --text-muted: #737373;
 
   --border: #E5E3DE;
   --border-hover: #D0CDC5;
@@ -3551,7 +3551,7 @@ textarea.form-control {
 .crumbs {
   margin-bottom: 28px;
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .crumbs a {
@@ -4505,4 +4505,19 @@ a.case-study-row {
 .split-intro > *,
 .svc-hero-grid > * {
   min-width: 0;
+}
+
+/* Text links inside dark sections and dark cards (final CTA note, results box) must stay readable */
+.section-contrast p a:not(.btn),
+.section-contrast li a:not(.btn),
+.proof-block a:not(.btn) {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.section-contrast p a:not(.btn):hover,
+.section-contrast li a:not(.btn):hover,
+.proof-block a:not(.btn):hover {
+  color: var(--accent);
 }
