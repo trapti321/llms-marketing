@@ -16,6 +16,7 @@ export default defineConfig({
         blogPost12: resolve(__dirname, 'blog/companies-that-outsource/index.html'),
         blogPost13: resolve(__dirname, 'blog/how-to-choose-a-law-firm-seo-company/index.html'),
         blogPost14: resolve(__dirname, 'blog/google-ads-vs-seo-for-dentists/index.html'),
+        blogPost15: resolve(__dirname, 'blog/daycare-seo/index.html'),
         blogPost11: resolve(__dirname, 'blog/seo-for-gyms/index.html'),
         blogPost10: resolve(__dirname, 'blog/generative-engine-optimization-for-dentists/index.html'),
         blogPost9: resolve(__dirname, 'blog/local-seo-for-ecommerce/index.html'),
