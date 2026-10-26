@@ -29,6 +29,7 @@ export default defineConfig({
         industries: resolve(__dirname, 'industries/index.html'),
         personalInjurySeo: resolve(__dirname, 'personal-injury-seo/index.html'),
         investmentFirmSeo: resolve(__dirname, 'seo-for-investment-firms/index.html'),
+        electricianSeo: resolve(__dirname, 'seo-for-electricians/index.html'),
         dentalSeoCypress: resolve(__dirname, 'dental-seo-cypress-tx/index.html'),
         seoCompanyCypress: resolve(__dirname, 'seo-company-cypress-tx/index.html'),
         ServicesAiLeadAgents: resolve(__dirname, 'services/ai-lead-agents/index.html'),
