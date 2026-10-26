@@ -44,6 +44,7 @@ export default defineConfig({
         PrivacyPolicy: resolve(__dirname, 'privacy-policy/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
         digitalStrategy: resolve(__dirname, 'services/digital-strategy-marketing/index.html'),
+        oldLlmGuideRedirect: resolve(__dirname, 'blog/what-is-llm-marketing-a-complete-guide-to-getting-discovered-on-ai-platforms/index.html'),
         thankYou: resolve(__dirname, 'thank-you/index.html')
       }
     }
