@@ -45,6 +45,11 @@ jobs:
       - name: Ensure SEO files are published at site root
         run: cp public/robots.txt dist/robots.txt && cp public/sitemap.xml dist/sitemap.xml
 
+      # og:image, twitter:image and JSON-LD reference /assets/images/... by absolute URL,
+      # which Vite does not rewrite, so publish the original image files at those paths too.
+      - name: Publish unhashed images for share previews and structured data
+        run: mkdir -p dist/assets && cp -R assets/images dist/assets/images
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
