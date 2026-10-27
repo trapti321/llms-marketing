@@ -74,6 +74,7 @@ SILOS = [
             "Each guide uses real search data and official guidelines. For hands-on help in a specific industry, see the <a href=\"/industries/\">industries we work with</a>.",
         ],
         "posts": [
+            "marketing-small-dental-practice",
             "seo-for-dermatologists",
             "seo-for-security-companies",
             "seo-for-locksmiths",
@@ -93,6 +94,7 @@ SILOS = [
 POST_INDUSTRY = {
     "seo-for-locksmiths": ("/seo-for-electricians/", "SEO for Electricians"),
     "seo-for-security-companies": ("/seo-for-electricians/", "SEO for Electricians"),
+    "marketing-small-dental-practice": ("/seo-for-orthodontists/", "SEO for Orthodontists"),
     "seo-for-dermatologists": ("/dental-seo-cypress-tx/", "Dental SEO in Cypress, TX"),
     "daycare-seo": ("/seo-for-educational-institutions/", "SEO for Educational Institutions"),
     "google-ads-vs-seo-for-dentists": ("/dental-seo-cypress-tx/", "Dental SEO in Cypress, TX"),
