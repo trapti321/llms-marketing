@@ -23,6 +23,7 @@ export default defineConfig({
         blogPost19: resolve(__dirname, 'blog/ai-agents-for-marketing/index.html'),
         blogPost20: resolve(__dirname, 'blog/seo-for-security-companies/index.html'),
         blogPost21: resolve(__dirname, 'blog/seo-for-dermatologists/index.html'),
+        blogPost22: resolve(__dirname, 'blog/how-to-use-ai-for-social-media/index.html'),
         blogPost11: resolve(__dirname, 'blog/seo-for-gyms/index.html'),
         blogPost10: resolve(__dirname, 'blog/generative-engine-optimization-for-dentists/index.html'),
         blogPost9: resolve(__dirname, 'blog/local-seo-for-ecommerce/index.html'),

@@ -56,6 +56,7 @@ SILOS = [
             "Each guide is vendor-neutral and built on official documentation, with the guardrails that keep automation safe and compliant. For hands-on help, see our <a href=\"/services/ai-lead-agents/\">AI lead agents</a> and <a href=\"/services/marketing-automation/\">marketing automation</a> services.",
         ],
         "posts": [
+            "how-to-use-ai-for-social-media",
             "ai-agents-for-marketing",
             "best-llm-for-business-and-marketing",
             "ai-advertising",
