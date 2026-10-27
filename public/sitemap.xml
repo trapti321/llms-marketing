@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://llmsmarketing.com/blog/what-is-llm-marketing/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -214,5 +214,15 @@
     <loc>https://llmsmarketing.com/blog/category/local-industry-seo/</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://llmsmarketing.com/report/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://llmsmarketing.com/report/state-of-ai-search-llm-marketing-2026/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

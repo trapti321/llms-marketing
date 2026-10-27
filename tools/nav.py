@@ -27,6 +27,7 @@ BLOG = [
     ("/blog/category/ai-search-geo/", "AI Search & GEO", "Get cited and recommended by AI"),
     ("/blog/category/ai-marketing/", "AI Marketing & Automation", "LLMs, AI agents and AI ads"),
     ("/blog/category/local-industry-seo/", "Local & Industry SEO", "Guides for local businesses by industry"),
+    ("/report/", "Reports & Insights", "Original research and trend reports"),
 ]
 ABOUT = [
     ("/about-us/", "About Us", "Who we are and how we work"),
@@ -41,7 +42,7 @@ def section_for(path):
     if path.startswith(("/our-services/", "/services/")): return "services"
     if path.startswith(("/industries/",)) or path in [u for u, *_ in INDUSTRIES + LOCATIONS]: return "industries"
     if path.startswith("/case-studies/"): return "case"
-    if path.startswith("/blog/"): return "blog"
+    if path.startswith(("/blog/", "/report/")): return "blog"
     if path.startswith(("/about-us/", "/our-approach/", "/author/")): return "about"
     if path.startswith("/contact/"): return "contact"
     return None

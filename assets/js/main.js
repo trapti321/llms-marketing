@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAISimulator();
   initHeroCanvas();
   initShareCopy();
+  initReportTools();
   initLeadTracking();
 });
 
@@ -647,5 +648,28 @@ function initShareCopy() {
         button.setAttribute('title', 'Copy link');
       }, 2000);
     });
+  });
+}
+
+/* ==========================================================================
+   Research Reports: copy citation, print / save as PDF
+   ========================================================================== */
+function initReportTools() {
+  document.querySelectorAll('.cite-copy').forEach(button => {
+    button.addEventListener('click', async () => {
+      const target = document.getElementById(button.dataset.copyTarget);
+      if (!target) return;
+      try {
+        await navigator.clipboard.writeText(target.innerText.trim());
+      } catch {
+        return;
+      }
+      button.textContent = 'Copied';
+      setTimeout(() => { button.textContent = 'Copy'; }, 2000);
+    });
+  });
+
+  document.querySelectorAll('.report-print').forEach(button => {
+    button.addEventListener('click', () => window.print());
   });
 }

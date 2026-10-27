@@ -34,7 +34,7 @@ SILOS = [
         "desc": "Guides to generative engine optimization and AI search visibility: get your brand cited and recommended in ChatGPT, Google AI Mode, Perplexity and Gemini.",
         "intro": [
             "Generative engine optimization (GEO) is the work of making your brand easy for AI assistants to find, understand and recommend. These guides explain how ChatGPT, Google AI Mode, Perplexity and Gemini choose what to cite, how GEO relates to traditional SEO, and the practical steps that move visibility.",
-            "Start with the pillar guide on LLM marketing, then go deeper into recommendations, AI search visibility, structured data and how search itself is changing. For done-for-you help, see our <a href=\"/services/ai-search-visibility/\">AI search visibility service</a>.",
+            "Start with the pillar guide on LLM marketing, then go deeper into recommendations, AI search visibility, structured data and how search itself is changing. For done-for-you help, see our <a href=\"/services/ai-search-visibility/\">AI search visibility service</a>, and for the data behind these guides, read our <a href=\"/report/state-of-ai-search-llm-marketing-2026/\">State of AI Search 2026 report</a>.",
         ],
         "posts": [
             "what-is-llm-marketing",

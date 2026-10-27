@@ -50,6 +50,8 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact/index.html'),
         digitalStrategy: resolve(__dirname, 'services/digital-strategy-marketing/index.html'),
         oldLlmGuideRedirect: resolve(__dirname, 'blog/what-is-llm-marketing-a-complete-guide-to-getting-discovered-on-ai-platforms/index.html'),
+        reportsHub: resolve(__dirname, 'report/index.html'),
+        reportAiSearch2026: resolve(__dirname, 'report/state-of-ai-search-llm-marketing-2026/index.html'),
         thankYou: resolve(__dirname, 'thank-you/index.html')
       }
     }

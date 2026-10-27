@@ -32,6 +32,10 @@ Also written as: LLMs Marketing, LLM Marketing Agency.
 - [AI Marketing & Automation guides](https://llmsmarketing.com/blog/category/ai-marketing/): guides to LLMs, AI agents and AI advertising for marketers
 - [Local & Industry SEO guides](https://llmsmarketing.com/blog/category/local-industry-seo/): local and industry SEO guides for gyms, yoga studios, daycares, locksmiths, dentists and law firms
 
+## Research reports
+- [Reports, trends and insights hub](https://llmsmarketing.com/report/): original research on AI search, LLM marketing and SEO for U.S. marketers
+- [The State of AI Search and LLM Marketing 2026](https://llmsmarketing.com/report/state-of-ai-search-llm-marketing-2026/): structured review of 19 sources on AI answer reach, click-through declines, zero-click search, AI citations, AI referral traffic and marketing budgets
+
 ## Key guides
 - [AI agents for marketing: use cases by channel, platforms agencies use and how to deploy safely](https://llmsmarketing.com/blog/ai-agents-for-marketing/)
 - [Best LLM for business and marketing in 2026: Claude vs ChatGPT vs Gemini and how to choose](https://llmsmarketing.com/blog/best-llm-for-business-and-marketing/)
