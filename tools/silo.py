@@ -114,6 +114,7 @@ PAGE_SILO = {
     "seo-company-cypress-tx": "local-industry-seo",
     "seo-for-investment-firms": "local-industry-seo",
     "seo-for-electricians": "local-industry-seo",
+    "seo-for-orthodontists": "local-industry-seo",
     "seo-for-educational-institutions": "local-industry-seo",
 }
 
