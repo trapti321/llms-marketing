@@ -39,6 +39,7 @@ export default defineConfig({
         investmentFirmSeo: resolve(__dirname, 'seo-for-investment-firms/index.html'),
         electricianSeo: resolve(__dirname, 'seo-for-electricians/index.html'),
         orthodontistSeo: resolve(__dirname, 'seo-for-orthodontists/index.html'),
+        hvacSeo: resolve(__dirname, 'seo-for-hvac/index.html'),
         educationSeo: resolve(__dirname, 'seo-for-educational-institutions/index.html'),
         blogHubAiSearch: resolve(__dirname, 'blog/category/ai-search-geo/index.html'),
         blogHubAiMarketing: resolve(__dirname, 'blog/category/ai-marketing/index.html'),

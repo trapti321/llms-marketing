@@ -19,6 +19,7 @@ INDUSTRIES = [
     ("/seo-for-investment-firms/", "Investment Firms", "SEO for RIAs, funds and real estate firms"),
     ("/seo-for-electricians/", "Electricians", "SEO for electrical contractors"),
     ("/seo-for-orthodontists/", "Orthodontists", "SEO for orthodontic practices"),
+    ("/seo-for-hvac/", "HVAC Companies", "SEO for heating and cooling contractors"),
     ("/seo-for-educational-institutions/", "Education", "SEO for schools, colleges and universities"),
 ]
 LOCATIONS = [

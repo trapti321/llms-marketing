@@ -117,6 +117,7 @@ PAGE_SILO = {
     "seo-for-investment-firms": "local-industry-seo",
     "seo-for-electricians": "local-industry-seo",
     "seo-for-orthodontists": "local-industry-seo",
+    "seo-for-hvac": "local-industry-seo",
     "seo-for-educational-institutions": "local-industry-seo",
 }
 
