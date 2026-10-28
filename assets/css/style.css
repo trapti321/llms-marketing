@@ -1180,6 +1180,10 @@ a {
 }
 
 /* Team photos and LinkedIn buttons */
+.team-portrait--photo picture {
+  display: contents;
+}
+
 .team-portrait--photo img {
   width: 100%;
   height: 100%;
