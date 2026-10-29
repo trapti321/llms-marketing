@@ -4985,3 +4985,23 @@ a.case-study-row {
 .report-hub-lead .lead-box {
   margin-top: 0;
 }
+
+/* Code examples in posts */
+.post-body pre.code-block {
+  margin: 20px 0 28px;
+  padding: 18px 20px;
+  background-color: #111827;
+  color: #e5e7eb;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+.post-body pre.code-block code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: none;
+  color: inherit;
+  padding: 0;
+}

@@ -27,6 +27,7 @@ export default defineConfig({
         blogPost23: resolve(__dirname, 'blog/marketing-small-dental-practice/index.html'),
         blogPost24: resolve(__dirname, 'blog/grok-seo/index.html'),
         blogPost25: resolve(__dirname, 'blog/how-to-seo-a-website/index.html'),
+        blogPost26: resolve(__dirname, 'blog/video-seo/index.html'),
         blogPost11: resolve(__dirname, 'blog/seo-for-gyms/index.html'),
         blogPost10: resolve(__dirname, 'blog/generative-engine-optimization-for-dentists/index.html'),
         blogPost9: resolve(__dirname, 'blog/local-seo-for-ecommerce/index.html'),

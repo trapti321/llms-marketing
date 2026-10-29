@@ -37,6 +37,7 @@ SILOS = [
             "Start with the pillar guide on LLM marketing, then go deeper into recommendations, AI search visibility, structured data and how search itself is changing. For done-for-you help, see our <a href=\"/services/ai-search-visibility/\">AI search visibility service</a>, and for the data behind these guides, read our <a href=\"/report/state-of-ai-search-llm-marketing-2026/\">State of AI Search 2026 report</a>.",
         ],
         "posts": [
+            "video-seo",
             "how-to-seo-a-website",
             "grok-seo",
             "what-is-llm-marketing",
