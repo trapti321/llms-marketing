@@ -39,6 +39,7 @@ Also written as: LLMs Marketing, LLM Marketing Agency.
 - [The State of AI Search and LLM Marketing 2026](https://llmsmarketing.com/report/state-of-ai-search-llm-marketing-2026/): structured review of 19 sources on AI answer reach, click-through declines, zero-click search, AI citations, AI referral traffic and marketing budgets
 
 ## Key guides
+- [Advanced Core Web Vitals: how to diagnose and fix LCP, INP and CLS](https://llmsmarketing.com/blog/advanced-core-web-vitals/)
 - [Video SEO: how to optimize video for Google, YouTube and AI search](https://llmsmarketing.com/blog/video-seo/)
 - [How to SEO a website: a step-by-step guide for Google and AI search](https://llmsmarketing.com/blog/how-to-seo-a-website/)
 - [Grok SEO: how to get your brand found and cited by Grok](https://llmsmarketing.com/blog/grok-seo/)
