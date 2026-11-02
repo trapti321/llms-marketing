@@ -23,6 +23,8 @@ INDUSTRIES = [
     ("/seo-for-educational-institutions/", "Education", "SEO for schools, colleges and universities"),
 ]
 LOCATIONS = [
+    ("/seo-by-city/", "SEO by City", "Local SEO programs in US cities"),
+    ("/seo-by-city/seattle-seo-agency/", "Seattle, WA", "Local SEO for Seattle and the Eastside"),
     ("/seo-company-cypress-tx/", "Cypress, TX", "Local SEO for Cypress businesses"),
 ]
 BLOG = [
@@ -42,7 +44,7 @@ esc = lambda s: s.replace("&", "&amp;")
 
 def section_for(path):
     if path.startswith(("/our-services/", "/services/")): return "services"
-    if path.startswith(("/industries/",)) or path in [u for u, *_ in INDUSTRIES + LOCATIONS]: return "industries"
+    if path.startswith(("/industries/", "/seo-by-city/")) or path in [u for u, *_ in INDUSTRIES + LOCATIONS]: return "industries"
     if path.startswith("/case-studies/"): return "case"
     if path.startswith(("/blog/", "/report/")): return "blog"
     if path.startswith(("/about-us/", "/our-approach/", "/author/")): return "about"

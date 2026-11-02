@@ -125,6 +125,8 @@ PAGE_SILO = {
     "seo-for-orthodontists": "local-industry-seo",
     "seo-for-hvac": "local-industry-seo",
     "seo-for-educational-institutions": "local-industry-seo",
+    "seo-by-city": "local-industry-seo",
+    "seo-by-city/seattle-seo-agency": "local-industry-seo",
 }
 
 esc = lambda s: html.escape(s, quote=True)
