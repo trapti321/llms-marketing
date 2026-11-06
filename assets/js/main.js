@@ -15,7 +15,147 @@ document.addEventListener('DOMContentLoaded', () => {
   initShareCopy();
   initReportTools();
   initLeadTracking();
+  initLanguageSwitcher();
 });
+
+/* ==========================================================================
+   Language Switcher
+   Visitors pick a language from the flag menu; the page is translated in the
+   browser by Google Translate. English stays the only indexed version: the
+   translation script loads only after a visitor chooses another language, so
+   crawlers always see the original English page.
+   ========================================================================== */
+
+const SITE_LANGUAGES = [
+  ['en', 'English', 'gb'],
+  ['es', 'Español', 'es'],
+  ['fr', 'Français', 'fr'],
+  ['de', 'Deutsch', 'de'],
+  ['pt', 'Português', 'pt'],
+  ['it', 'Italiano', 'it'],
+  ['nl', 'Nederlands', 'nl'],
+  ['ru', 'Русский', 'ru'],
+  ['ro', 'Română', 'ro'],
+  ['el', 'Ελληνικά', 'gr'],
+  ['ar', 'العربية', 'ae'],
+  ['hi', 'हिन्दी', 'in'],
+  ['th', 'ไทย', 'th'],
+  ['zh-CN', '中文 (简体)', 'cn'],
+  ['ja', '日本語', 'jp'],
+];
+
+function currentSiteLanguage() {
+  const m = document.cookie.match(/(?:^|;\s*)googtrans=\/[^/]+\/([^;]+)/);
+  const code = m ? decodeURIComponent(m[1]) : 'en';
+  return SITE_LANGUAGES.some(([c]) => c === code) ? code : 'en';
+}
+
+function setSiteLanguage(code) {
+  const host = location.hostname;
+  const isIp = /^[\d.]+$/.test(host) || host === 'localhost';
+  const root = host.replace(/^www\./, '');
+  const expired = 'expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  document.cookie = `googtrans=; ${expired}`;
+  if (!isIp) {
+    document.cookie = `googtrans=; ${expired}; domain=${host}`;
+    document.cookie = `googtrans=; ${expired}; domain=.${root}`;
+  }
+  if (code !== 'en') {
+    const value = `googtrans=/en/${code}; path=/; max-age=31536000; SameSite=Lax`;
+    document.cookie = value;
+    if (!isIp) document.cookie = `${value}; domain=.${root}`;
+  }
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'language_select', { language: code });
+  }
+  location.reload();
+}
+
+function loadGoogleTranslate() {
+  if (document.getElementById('google_translate_element')) return;
+  const holder = document.createElement('div');
+  holder.id = 'google_translate_element';
+  holder.hidden = true;
+  document.body.appendChild(holder);
+  window.googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: SITE_LANGUAGES.map(([c]) => c).filter((c) => c !== 'en').join(','),
+      autoDisplay: false,
+    }, 'google_translate_element');
+  };
+  const s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  s.async = true;
+  document.body.appendChild(s);
+}
+
+function initLanguageSwitcher() {
+  const current = currentSiteLanguage();
+  // Keep the brand name in English in every language.
+  document.querySelectorAll('.logo').forEach((el) => el.classList.add('notranslate'));
+  if (current !== 'en') loadGoogleTranslate();
+
+  const flag = (cc) => `<img src="/assets/images/flags/${cc}.png" alt="" width="22" height="15" loading="lazy" decoding="async">`;
+  const label = (code) => code.split('-')[0].toUpperCase();
+  const active = SITE_LANGUAGES.find(([c]) => c === current);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'lang-switch notranslate';
+  wrap.setAttribute('translate', 'no');
+  wrap.innerHTML = `
+    <div class="lang-menu" id="lang-menu" role="menu" aria-label="Choose language" hidden>
+      ${SITE_LANGUAGES.map(([code, name, cc]) => `
+        <button type="button" class="lang-option" role="menuitemradio" aria-checked="${code === current}" data-lang="${code}" lang="${code}">
+          ${flag(cc)}<span>${name}</span>
+          <svg class="lang-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>`).join('')}
+      <p class="lang-note">Automatic translation by Google. English is the original.</p>
+    </div>
+    <button type="button" class="lang-switch-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="lang-menu" aria-label="Language: ${active[1]}. Change language">
+      ${flag(active[2])}<span>${label(current)}</span>
+      <svg class="lang-chevron" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 7.5 6 4l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>`;
+  document.body.appendChild(wrap);
+
+  const btn = wrap.querySelector('.lang-switch-btn');
+  const menu = wrap.querySelector('.lang-menu');
+  const options = [...menu.querySelectorAll('.lang-option')];
+
+  const close = (focusBtn) => {
+    menu.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+    wrap.classList.remove('is-open');
+    if (focusBtn) btn.focus();
+  };
+  const open = () => {
+    menu.hidden = false;
+    btn.setAttribute('aria-expanded', 'true');
+    wrap.classList.add('is-open');
+    (options.find((o) => o.getAttribute('aria-checked') === 'true') || options[0]).focus();
+  };
+
+  btn.addEventListener('click', () => (menu.hidden ? open() : close(false)));
+  options.forEach((o, i) => {
+    o.addEventListener('click', () => {
+      const code = o.dataset.lang;
+      if (code === current) return close(true);
+      setSiteLanguage(code);
+    });
+    o.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); options[(i + 1) % options.length].focus(); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); options[(i - 1 + options.length) % options.length].focus(); }
+      if (e.key === 'Home') { e.preventDefault(); options[0].focus(); }
+      if (e.key === 'End') { e.preventDefault(); options[options.length - 1].focus(); }
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.hidden) close(true);
+  });
+  document.addEventListener('click', (e) => {
+    if (!menu.hidden && !wrap.contains(e.target)) close(false);
+  });
+}
 
 /* ==========================================================================
    GA4 Lead Tracking
