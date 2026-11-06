@@ -118,6 +118,7 @@ PAGE_SILO = {
     "services/ai-lead-agents": "ai-marketing",
     "services/marketing-automation": "ai-marketing",
     "services/email-marketing": "ai-marketing",
+    "services/google-ads-management": "ai-marketing",
     "personal-injury-seo": "local-industry-seo",
     "dental-seo-cypress-tx": "local-industry-seo",
     "seo-company-cypress-tx": "local-industry-seo",
@@ -128,6 +129,7 @@ PAGE_SILO = {
     "seo-for-educational-institutions": "local-industry-seo",
     "seo-by-city": "local-industry-seo",
     "seo-by-city/seattle-seo-agency": "local-industry-seo",
+    "seo-by-city/chicago-seo-agency": "local-industry-seo",
 }
 
 esc = lambda s: html.escape(s, quote=True)

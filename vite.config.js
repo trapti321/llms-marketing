@@ -5,6 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        city_chicago_seo_agency: resolve(__dirname, 'seo-by-city/chicago-seo-agency/index.html'),
         city_seattle_seo_agency: resolve(__dirname, 'seo-by-city/seattle-seo-agency/index.html'),
         city_seo_by_city: resolve(__dirname, 'seo-by-city/index.html'),
         main: resolve(__dirname, 'index.html'),

@@ -24,6 +24,8 @@ REGIONS = ["Pacific & Northwest", "Mountain & Southwest", "Texas & South Central
 CITIES = [
     {"slug": "seattle-seo-agency", "city": "Seattle", "state": "WA", "region": "Pacific & Northwest",
      "blurb": "Seattle and the Eastside: neighborhood pages, the Lake Washington split and Washington's health data law."},
+    {"slug": "chicago-seo-agency", "city": "Chicago", "state": "IL", "region": "Midwest",
+     "blurb": "Chicago neighborhoods and suburbs: community-area pages, lakefront geography and Illinois' biometric privacy law."},
     {"slug": "seo-company-cypress-tx", "city": "Cypress", "state": "TX", "region": "Texas & South Central",
      "url": "/seo-company-cypress-tx/",
      "blurb": "Local SEO and Google Business Profile work for service businesses across Cypress and Cy-Fair."},
