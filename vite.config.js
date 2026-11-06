@@ -58,6 +58,7 @@ export default defineConfig({
         ServicesAiLeadAgents: resolve(__dirname, 'services/ai-lead-agents/index.html'),
         ServicesMarketingAutomation: resolve(__dirname, 'services/marketing-automation/index.html'),
         ServicesEmailMarketing: resolve(__dirname, 'services/email-marketing/index.html'),
+        ServicesGoogleAdsManagement: resolve(__dirname, 'services/google-ads-management/index.html'),
         CaseStudies: resolve(__dirname, 'case-studies/index.html'),
         OurApproach: resolve(__dirname, 'our-approach/index.html'),
         BookACall: resolve(__dirname, 'book-a-call/index.html'),

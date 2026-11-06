@@ -12,6 +12,7 @@ SERVICES = [
     ("/services/ai-lead-agents/", "AI Lead Agents", "Answer and qualify inquiries 24/7"),
     ("/services/marketing-automation/", "Marketing Automation", "Forms, CRM and follow-up connected"),
     ("/services/email-marketing/", "Email Marketing", "Sequences that turn leads into calls"),
+    ("/services/google-ads-management/", "Google Ads Management", "PPC judged on cost per lead"),
 ]
 INDUSTRIES = [
     ("/personal-injury-seo/", "Personal Injury Law Firms", "SEO and AI visibility for injury lawyers"),
