@@ -40,6 +40,7 @@ Also written as: LLMs Marketing, LLM Marketing Agency.
 - [The State of AI Search and LLM Marketing 2026](https://llmsmarketing.com/report/state-of-ai-search-llm-marketing-2026/): structured review of 19 sources on AI answer reach, click-through declines, zero-click search, AI citations, AI referral traffic and marketing budgets
 
 ## Key guides
+- [SEO for influencers: how creators get found on Google, YouTube, Instagram, TikTok and AI search](https://llmsmarketing.com/blog/seo-for-influencers/)
 - [Small business marketing strategies: 13 ways to grow, real click costs, review rules and a 90-day plan](https://llmsmarketing.com/blog/small-business-marketing-strategies/)
 - [ChatGPT ads: how they work, what they cost and how to get started](https://llmsmarketing.com/blog/chatgpt-ads/)
 - [UploadBlog.com review: is it legit for SEO? A data-led audit and guest post vetting checklist](https://llmsmarketing.com/blog/uploadblog-com-review/)
