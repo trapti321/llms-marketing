@@ -5017,3 +5017,7 @@ a.case-study-row {
 .city-list strong { display: block; color: var(--text-primary); font-weight: 600; }
 .city-list span { display: block; margin-top: 2px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
 .city-list a:hover strong { color: var(--accent); }
+
+/* Blog disclosure / methodology note */
+.post-note { margin: 28px 0; padding: 18px 22px; border: 1px solid var(--accent-border); background: var(--accent-soft); border-radius: 12px; }
+.post-note p { margin: 0; font-size: 0.95rem; line-height: 1.6; }
