@@ -36,6 +36,7 @@ export default defineConfig({
         blogPost31: resolve(__dirname, 'blog/seo-for-influencers/index.html'),
         blogPost32: resolve(__dirname, 'blog/image-search-techniques/index.html'),
         blogPost33: resolve(__dirname, 'blog/top-digital-marketing-companies/index.html'),
+        blogPost34: resolve(__dirname, 'blog/chatgpt-business-hub/index.html'),
         blogPost28: resolve(__dirname, 'blog/uploadblog-com-review/index.html'),
         blogPost27: resolve(__dirname, 'blog/advanced-core-web-vitals/index.html'),
         blogPost11: resolve(__dirname, 'blog/seo-for-gyms/index.html'),
