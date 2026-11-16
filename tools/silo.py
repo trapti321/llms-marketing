@@ -37,6 +37,7 @@ SILOS = [
             "Start with the pillar guide on LLM marketing, then go deeper into recommendations, AI search visibility, structured data and how search itself is changing. For done-for-you help, see our <a href=\"/services/ai-search-visibility/\">AI search visibility service</a>, and for the data behind these guides, read our <a href=\"/report/state-of-ai-search-llm-marketing-2026/\">State of AI Search 2026 report</a>.",
         ],
         "posts": [
+            "what-is-seo",
             "chatgpt-business-hub",
             "image-search-techniques",
             "seo-for-influencers",
@@ -64,6 +65,7 @@ SILOS = [
             "Each guide is vendor-neutral and built on official documentation, with the guardrails that keep automation safe and compliant. For hands-on help, see our <a href=\"/services/ai-lead-agents/\">AI lead agents</a> and <a href=\"/services/marketing-automation/\">marketing automation</a> services.",
         ],
         "posts": [
+            "how-to-choose-a-digital-marketing-agency",
             "cro-audit",
             "what-digital-marketing-services-does-my-business-need",
             "top-digital-marketing-companies",
@@ -87,6 +89,7 @@ SILOS = [
             "Each guide uses real search data and official guidelines. For hands-on help in a specific industry, see the <a href=\"/industries/\">industries we work with</a>.",
         ],
         "posts": [
+            "google-reviews-vs-yelp",
             "how-to-get-more-google-reviews",
             "marketing-small-dental-practice",
             "seo-for-dermatologists",

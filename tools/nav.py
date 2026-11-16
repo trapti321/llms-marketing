@@ -17,6 +17,7 @@ SERVICES = [
     ("/services/google-ads-management/", "Google Ads Management", "PPC judged on cost per lead"),
     ("/services/ecommerce-seo/", "Ecommerce SEO", "Category, product and feed SEO for stores"),
     ("/services/franchise-seo/", "Franchise SEO", "SEO for franchise brands and every location"),
+    ("/services/online-reputation-management/", "Reputation Management", "Honest review, search and AI answer work"),
 ]
 INDUSTRIES = [
     ("/seo-for-healthcare/", "Healthcare", "SEO for medical practices, clinics and hospitals"),
@@ -26,6 +27,8 @@ INDUSTRIES = [
     ("/seo-for-electricians/", "Electricians", "SEO for electrical contractors"),
     ("/seo-for-orthodontists/", "Orthodontists", "SEO for orthodontic practices"),
     ("/seo-for-hvac/", "HVAC Companies", "SEO for heating and cooling contractors"),
+    ("/seo-for-real-estate/", "Real Estate", "SEO for realtors, teams and brokerages"),
+    ("/seo-for-roofers/", "Roofing Contractors", "SEO for roofing contractors"),
     ("/seo-for-educational-institutions/", "Education", "SEO for schools, colleges and universities"),
 ]
 LOCATIONS = [
