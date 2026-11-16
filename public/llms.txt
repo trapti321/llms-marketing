@@ -11,6 +11,11 @@ Also written as: LLMs Marketing, LLM Marketing Agency.
 - Brands investing in brand building for AI visibility
 
 ## Services
+- [SEO Services](https://llmsmarketing.com/services/seo/): full SEO programs for US businesses covering technical SEO, content, on-page, authority and measurement, built for Google and AI answers
+- [Local SEO Services](https://llmsmarketing.com/services/local-seo/): Google Business Profile optimization, map pack rankings, reviews, location pages and local AI answer visibility
+- [Ecommerce SEO Services](https://llmsmarketing.com/services/ecommerce-seo/): category and product page SEO, faceted navigation, product structured data, Merchant Center free listings and AI shopping visibility
+- [Franchise SEO](https://llmsmarketing.com/services/franchise-seo/): multi-location SEO for franchise brands: location pages without doorway content, bulk Business Profile management, reviews and per-location reporting
+- [Healthcare SEO](https://llmsmarketing.com/seo-for-healthcare/): SEO for medical practices, clinics and hospitals with E-E-A-T provider pages, medical schema and HIPAA-aware tracking
 - [AI Search Visibility and GEO](https://llmsmarketing.com/services/ai-search-visibility/): get mentioned and cited in AI answers
 - [AI SEO and Content](https://llmsmarketing.com/services/ai-seo/): answer-first content and technical SEO that ranks and gets quoted
 - [AI Lead Agents](https://llmsmarketing.com/services/ai-lead-agents/): AI agents that qualify enquiries and book calls 24/7
@@ -40,6 +45,9 @@ Also written as: LLMs Marketing, LLM Marketing Agency.
 - [The State of AI Search and LLM Marketing 2026](https://llmsmarketing.com/report/state-of-ai-search-llm-marketing-2026/): structured review of 19 sources on AI answer reach, click-through declines, zero-click search, AI citations, AI referral traffic and marketing budgets
 
 ## Key guides
+- [CRO audit: how to run a conversion rate optimization audit in one week, with GA4 funnels, heuristics and test prioritization](https://llmsmarketing.com/blog/cro-audit/)
+- [What digital marketing services does my business need? A decision framework by business type and stage](https://llmsmarketing.com/blog/what-digital-marketing-services-does-my-business-need/)
+- [How to get more Google reviews: policy-safe request templates, responses and review bombing fixes](https://llmsmarketing.com/blog/how-to-get-more-google-reviews/)
 - [ChatGPT Business Hub: how to claim your business in ChatGPT, verify by DNS and read mentions, clicks and discovery topics](https://llmsmarketing.com/blog/chatgpt-business-hub/)
 - [Top digital marketing companies in the US: 13 agencies compared by specialty, pricing models and how to choose](https://llmsmarketing.com/blog/top-digital-marketing-companies/)
 - [Image search techniques: reverse image search, Google Lens, verifying images and AI checks, and image SEO](https://llmsmarketing.com/blog/image-search-techniques/)

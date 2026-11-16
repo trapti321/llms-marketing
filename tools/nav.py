@@ -7,14 +7,19 @@ import glob, re, sys, os
 os.chdir(sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 SERVICES = [
+    ("/services/seo/", "SEO Services", "Full SEO program for Google and AI answers"),
+    ("/services/local-seo/", "Local SEO", "Win the map pack and local AI answers"),
     ("/services/ai-search-visibility/", "AI Search Visibility", "Get mentioned and cited in AI answers"),
     ("/services/ai-seo/", "AI SEO & Content", "Rank on Google and get quoted by AI"),
     ("/services/ai-lead-agents/", "AI Lead Agents", "Answer and qualify inquiries 24/7"),
     ("/services/marketing-automation/", "Marketing Automation", "Forms, CRM and follow-up connected"),
     ("/services/email-marketing/", "Email Marketing", "Sequences that turn leads into calls"),
     ("/services/google-ads-management/", "Google Ads Management", "PPC judged on cost per lead"),
+    ("/services/ecommerce-seo/", "Ecommerce SEO", "Category, product and feed SEO for stores"),
+    ("/services/franchise-seo/", "Franchise SEO", "SEO for franchise brands and every location"),
 ]
 INDUSTRIES = [
+    ("/seo-for-healthcare/", "Healthcare", "SEO for medical practices, clinics and hospitals"),
     ("/personal-injury-seo/", "Personal Injury Law Firms", "SEO and AI visibility for injury lawyers"),
     ("/dental-seo-cypress-tx/", "Dental Practices", "Dental SEO for Cypress, TX practices"),
     ("/seo-for-investment-firms/", "Investment Firms", "SEO for RIAs, funds and real estate firms"),

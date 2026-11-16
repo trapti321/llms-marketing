@@ -64,6 +64,8 @@ SILOS = [
             "Each guide is vendor-neutral and built on official documentation, with the guardrails that keep automation safe and compliant. For hands-on help, see our <a href=\"/services/ai-lead-agents/\">AI lead agents</a> and <a href=\"/services/marketing-automation/\">marketing automation</a> services.",
         ],
         "posts": [
+            "cro-audit",
+            "what-digital-marketing-services-does-my-business-need",
             "top-digital-marketing-companies",
             "small-business-marketing-strategies",
             "chatgpt-ads",
@@ -85,6 +87,7 @@ SILOS = [
             "Each guide uses real search data and official guidelines. For hands-on help in a specific industry, see the <a href=\"/industries/\">industries we work with</a>.",
         ],
         "posts": [
+            "how-to-get-more-google-reviews",
             "marketing-small-dental-practice",
             "seo-for-dermatologists",
             "seo-for-security-companies",

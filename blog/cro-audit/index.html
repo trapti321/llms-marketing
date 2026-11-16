@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FEJCYBHWX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8FEJCYBHWX');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRO Audit: A Step-by-Step Checklist to Run in One Week</title>
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#171717">
+  <link rel="canonical" href="https://llmsmarketing.com/blog/cro-audit/">
+  <meta name="description" content="Run a CRO audit in one week: set GA4 baselines, find funnel drop-off, review heatmaps, forms, checkout and Core Web Vitals, then prioritize and plan A/B tests.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Mohd Adil Kazmi">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LLM's Marketing">
+  <meta property="og:url" content="https://llmsmarketing.com/blog/cro-audit/">
+  <meta property="og:title" content="CRO Audit: How to Run a Conversion Rate Optimization Audit in One Week">
+  <meta property="og:description" content="A day-by-day CRO audit: GA4 funnel explorations, heatmaps and recordings, heuristic review, checkout friction, Core Web Vitals, ICE scoring and A/B test sample sizes.">
+  <meta property="og:image" content="https://llmsmarketing.com/assets/images/blog/cro-audit.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="Illustration of a web page with funnel-shaped bars, heatmap hotspots, a cursor and a magnifying glass inspecting the page">
+  <meta property="article:published_time" content="2026-11-17">
+  <meta property="article:modified_time" content="2026-11-17">
+  <meta property="article:author" content="https://llmsmarketing.com/author/mohd-adil-kazmi/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CRO Audit: How to Run a Conversion Rate Optimization Audit in One Week">
+  <meta name="twitter:description" content="A day-by-day CRO audit: GA4 funnel explorations, heatmaps and recordings, heuristic review, checkout friction, Core Web Vitals, ICE scoring and A/B test sample sizes.">
+  <meta name="twitter:image" content="https://llmsmarketing.com/assets/images/blog/cro-audit.jpg">
+  <link rel="preload" as="image" href="/assets/images/blog/cro-audit.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://llmsmarketing.com/blog/cro-audit/#article",
+        "headline": "CRO Audit: How to Run a Conversion Rate Optimization Audit in One Week",
+        "name": "CRO Audit: A Step-by-Step Checklist to Run in One Week",
+        "description": "Run a CRO audit in one week: set GA4 baselines, find funnel drop-off, review heatmaps, forms, checkout and Core Web Vitals, then prioritize and plan A/B tests.",
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://llmsmarketing.com/assets/images/blog/cro-audit.jpg",
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://llmsmarketing.com/assets/images/blog/cro-audit-4x3.jpg",
+            "width": 1200,
+            "height": 900
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://llmsmarketing.com/assets/images/blog/cro-audit-1x1.jpg",
+            "width": 1200,
+            "height": 1200
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://llmsmarketing.com/assets/images/blog/cro-audit-workflow.jpg",
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://llmsmarketing.com/assets/images/blog/cro-audit-funnel-drop-off.jpg",
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://llmsmarketing.com/assets/images/blog/cro-audit-prioritization-matrix.jpg",
+            "width": 1600,
+            "height": 900
+          }
+        ],
+        "datePublished": "2026-11-17",
+        "dateModified": "2026-11-17",
+        "wordCount": 3281,
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://llmsmarketing.com/blog/cro-audit/"
+        },
+        "keywords": [
+          "cro audit",
+          "conversion rate optimization audit",
+          "cro audit checklist",
+          "landing page audit",
+          "funnel analysis",
+          "ga4 funnel exploration",
+          "heatmaps",
+          "a/b testing"
+        ],
+        "about": [
+          {
+            "@type": "Thing",
+            "name": "Conversion rate optimization"
+          },
+          {
+            "@type": "Thing",
+            "name": "Google Analytics 4"
+          },
+          {
+            "@type": "Thing",
+            "name": "A/B testing"
+          },
+          {
+            "@type": "Thing",
+            "name": "Usability"
+          },
+          {
+            "@type": "Thing",
+            "name": "Core Web Vitals"
+          }
+        ],
+        "citation": [
+          "https://support.google.com/analytics/answer/9327974",
+          "https://support.google.com/analytics/answer/13128484",
+          "https://baymard.com/lists/cart-abandonment-rate",
+          "https://www.nngroup.com/articles/ten-usability-heuristics/",
+          "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/",
+          "https://web.dev/articles/vitals",
+          "https://www.evanmiller.org/ab-testing/sample-size.html"
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://llmsmarketing.com/author/mohd-adil-kazmi/#person",
+          "name": "Mohd Adil Kazmi",
+          "url": "https://llmsmarketing.com/author/mohd-adil-kazmi/",
+          "jobTitle": "SEO Consultant and Founder",
+          "image": "https://llmsmarketing.com/assets/images/mohd-adil-kazmi.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/best-seo-provider/"
+          ]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://llmsmarketing.com/#organization",
+          "name": "LLM's Marketing",
+          "url": "https://llmsmarketing.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://llmsmarketing.com/icon-512.png"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a CRO audit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A CRO audit is a structured review of your analytics, user behavior, page design, forms, checkout and site speed that finds where visitors drop out of your funnel and why. It ends with a prioritized list of fixes and a few A/B tests with clear hypotheses and sample sizes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a CRO audit take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A focused audit of two or three key journeys can be done in about five working days: two days for goals, tracking and funnel analysis, two days for qualitative research and page reviews, and one day for prioritization and test design. Larger sites with many templates or markets take longer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What tools do I need for a CRO audit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At minimum you need Google Analytics 4 with working key events, a heatmap and session recording tool, a way to run a short on-page survey, and PageSpeed Insights or Search Console for Core Web Vitals. An A/B testing tool is only needed once you have tests with enough traffic to reach a result."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I find funnel drop-off in GA4?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Go to Explore, choose Funnel exploration and add up to 10 steps based on events or dimensions, such as page view, add to cart, begin checkout and purchase. Use an open funnel if people often enter mid-journey, turn on elapsed time to spot slow steps, and break the funnel down by device and channel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between ICE and PIE scoring?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ICE scores each idea for Impact, Confidence and Ease, which suits ranking individual fixes. PIE scores Potential, Importance and Ease, which suits ranking which pages to work on first. Both are simple frameworks; what matters most is basing the scores on evidence from your audit rather than opinion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much traffic do I need for A/B testing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your baseline conversion rate and the lift you want to detect. At 95% significance and 80% power, a page converting at 3% needs roughly 13,900 visitors per variation to detect a 20% relative lift, and about 53,200 to detect a 10% lift. Low-traffic pages are better served by fixes and bolder changes than by split tests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I do a CRO audit myself or hire someone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A marketer with GA4 access and one developer can run the process in this guide. Outside help is worth it when tracking is unreliable, when the team is too close to the pages to see friction, or when you need someone to run tests and implement changes across analytics, paid media and automation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json" data-silo="breadcrumb">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://llmsmarketing.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://llmsmarketing.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Marketing & Automation",
+        "item": "https://llmsmarketing.com/blog/category/ai-marketing/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "CRO Audit: How to Run a Conversion Rate Optimization Audit in One Week",
+        "item": "https://llmsmarketing.com/blog/cro-audit/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">LLM’s Marketing<span class="logo-dot"></span></a>
+      <nav class="nav-container" aria-label="Main">
+        <ul class="nav-menu">
+          <li class="nav-item has-dropdown"><a href="/our-services/" class="nav-link">Services</a><button type="button" class="nav-dd-toggle" aria-expanded="false" aria-controls="dd-services" aria-label="Show Services menu"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown" id="dd-services"><div class="nav-dropdown-inner"><a href="/services/seo/" class="nav-dd-link"><strong>SEO Services</strong><span>Full SEO program for Google and AI answers</span></a><a href="/services/local-seo/" class="nav-dd-link"><strong>Local SEO</strong><span>Win the map pack and local AI answers</span></a><a href="/services/ai-search-visibility/" class="nav-dd-link"><strong>AI Search Visibility</strong><span>Get mentioned and cited in AI answers</span></a><a href="/services/ai-seo/" class="nav-dd-link"><strong>AI SEO &amp; Content</strong><span>Rank on Google and get quoted by AI</span></a><a href="/services/ai-lead-agents/" class="nav-dd-link"><strong>AI Lead Agents</strong><span>Answer and qualify inquiries 24/7</span></a><a href="/services/marketing-automation/" class="nav-dd-link"><strong>Marketing Automation</strong><span>Forms, CRM and follow-up connected</span></a><a href="/services/email-marketing/" class="nav-dd-link"><strong>Email Marketing</strong><span>Sequences that turn leads into calls</span></a><a href="/services/google-ads-management/" class="nav-dd-link"><strong>Google Ads Management</strong><span>PPC judged on cost per lead</span></a><a href="/services/ecommerce-seo/" class="nav-dd-link"><strong>Ecommerce SEO</strong><span>Category, product and feed SEO for stores</span></a><a href="/services/franchise-seo/" class="nav-dd-link"><strong>Franchise SEO</strong><span>SEO for franchise brands and every location</span></a><a href="/our-services/" class="nav-dd-all">All services →</a></div></div></li>
+          <li class="nav-item has-dropdown"><a href="/industries/" class="nav-link">Industries</a><button type="button" class="nav-dd-toggle" aria-expanded="false" aria-controls="dd-industries" aria-label="Show Industries menu"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown nav-dropdown--wide" id="dd-industries"><div class="nav-dropdown-inner"><p class="nav-dd-group-label">Industries</p><a href="/seo-for-healthcare/" class="nav-dd-link"><strong>Healthcare</strong><span>SEO for medical practices, clinics and hospitals</span></a><a href="/personal-injury-seo/" class="nav-dd-link"><strong>Personal Injury Law Firms</strong><span>SEO and AI visibility for injury lawyers</span></a><a href="/dental-seo-cypress-tx/" class="nav-dd-link"><strong>Dental Practices</strong><span>Dental SEO for Cypress, TX practices</span></a><a href="/seo-for-investment-firms/" class="nav-dd-link"><strong>Investment Firms</strong><span>SEO for RIAs, funds and real estate firms</span></a><a href="/seo-for-electricians/" class="nav-dd-link"><strong>Electricians</strong><span>SEO for electrical contractors</span></a><a href="/seo-for-orthodontists/" class="nav-dd-link"><strong>Orthodontists</strong><span>SEO for orthodontic practices</span></a><a href="/seo-for-hvac/" class="nav-dd-link"><strong>HVAC Companies</strong><span>SEO for heating and cooling contractors</span></a><a href="/seo-for-educational-institutions/" class="nav-dd-link"><strong>Education</strong><span>SEO for schools, colleges and universities</span></a><p class="nav-dd-group-label">Locations</p><a href="/seo-by-city/" class="nav-dd-link"><strong>SEO by City</strong><span>Local SEO programs in US cities</span></a><a href="/seo-by-city/seattle-seo-agency/" class="nav-dd-link"><strong>Seattle, WA</strong><span>Local SEO for Seattle and the Eastside</span></a><a href="/seo-company-cypress-tx/" class="nav-dd-link"><strong>Cypress, TX</strong><span>Local SEO for Cypress businesses</span></a><a href="/industries/" class="nav-dd-all">All industries and locations →</a></div></div></li>
+          <li><a href="/case-studies/" class="nav-link">Case Studies</a></li>
+          <li class="nav-item has-dropdown"><a href="/blog/" class="nav-link active">Blog</a><button type="button" class="nav-dd-toggle" aria-expanded="false" aria-controls="dd-blog" aria-label="Show Blog menu"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown" id="dd-blog"><div class="nav-dropdown-inner"><a href="/blog/category/ai-search-geo/" class="nav-dd-link"><strong>AI Search &amp; GEO</strong><span>Get cited and recommended by AI</span></a><a href="/blog/category/ai-marketing/" class="nav-dd-link"><strong>AI Marketing &amp; Automation</strong><span>LLMs, AI agents and AI ads</span></a><a href="/blog/category/local-industry-seo/" class="nav-dd-link"><strong>Local &amp; Industry SEO</strong><span>Guides for local businesses by industry</span></a><a href="/report/" class="nav-dd-link"><strong>Reports &amp; Insights</strong><span>Original research and trend reports</span></a><a href="/blog/" class="nav-dd-all">All articles →</a></div></div></li>
+          <li class="nav-item has-dropdown"><a href="/about-us/" class="nav-link">About</a><button type="button" class="nav-dd-toggle" aria-expanded="false" aria-controls="dd-about" aria-label="Show About menu"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown" id="dd-about"><div class="nav-dropdown-inner"><a href="/about-us/" class="nav-dd-link"><strong>About Us</strong><span>Who we are and how we work</span></a><a href="/our-approach/" class="nav-dd-link"><strong>Our Approach</strong><span>Our testing-led SEO process</span></a><a href="/author/mohd-adil-kazmi/" class="nav-dd-link"><strong>Our Founder</strong><span>Mohd Adil Kazmi, 8+ years in SEO</span></a></div></div></li>
+          <li><a href="/contact/" class="nav-link">Contact</a></li>
+          <li><a href="/book-a-call/" class="btn btn-nav-cta">Book a free call <span class="btn-nav-arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="post-detail-container">
+    <header class="post-header reveal-fade-up">
+      <nav class="crumbs post-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blog/">Blog</a> <span aria-hidden="true">/</span> <a href="/blog/category/ai-marketing/">AI Marketing &amp; Automation</a></nav>
+      <div class="post-meta"><a href="/blog/category/ai-marketing/">AI Marketing &amp; Automation</a></div>
+      <h1>CRO Audit: How to Run a Conversion Rate Optimization Audit in One Week</h1>
+      <p class="post-dates"><span class="pd-item"><b>Published</b> <time datetime="2026-11-17">November 17, 2026</time></span> <span class="pd-item"><b>Last update:</b> <time datetime="2026-11-17">November 17, 2026</time></span></p>
+      <div class="post-byline">
+        <a class="byline-author" href="/author/mohd-adil-kazmi/" rel="author">
+          <span class="author-avatar author-avatar--sm" aria-hidden="true"><img src="/assets/images/mohd-adil-kazmi.jpg" alt="" width="36" height="36" loading="lazy" decoding="async"></span>
+          <span>By <span class="byline-name">Mohd Adil Kazmi</span></span>
+        </a>
+        <span class="byline-detail">SEO Consultant &amp; Founder</span>
+        <span class="byline-detail">14 min read</span>
+      </div>
+      <div class="share-bar">
+        <span class="share-label">Share</span>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F" aria-label="Share on LinkedIn" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.7 3.4A2.3 2.3 0 1 1 0 3.4a2.3 2.3 0 0 1 4.7 0ZM.3 8h4.4v14H.3V8Zm7.1 0h4.2v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V22h-4.4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V22H7.4V8Z"/></svg></a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F&amp;text=CRO%20Audit%3A%20How%20to%20Run%20a%20Conversion%20Rate%20Optimization%20Audit%20in%20One%20Week" aria-label="Share on X" title="Share on X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.8 2.3h7l4.8 6.4 5.6-6.4Zm-1.2 17.9h1.9L6.9 4.2H4.9l12.1 16Z"/></svg></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F" aria-label="Share on Facebook" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.4 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.2v3.2H10V22h3.4Z"/></svg></a>
+        <a href="mailto:?subject=CRO%20Audit%3A%20How%20to%20Run%20a%20Conversion%20Rate%20Optimization%20Audit%20in%20One%20Week&amp;body=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F" aria-label="Share by email" title="Share by email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 5h20v14H2V5Zm2 2v.5l8 5 8-5V7H4Zm16 2.8-8 5-8-5V17h16V9.8Z"/></svg></a>
+        <button type="button" class="share-copy" data-url="https://llmsmarketing.com/blog/cro-audit/" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4 4 0 0 0 5.7 0l3.5-3.5a4 4 0 0 0-5.7-5.7l-1.2 1.2 1.4 1.4 1.2-1.2a2 2 0 0 1 2.9 2.9l-3.5 3.5a2 2 0 0 1-2.9 0l-1.4 1.4Zm2.8-2.8a4 4 0 0 0-5.7 0l-3.5 3.5a4 4 0 0 0 5.7 5.7l1.2-1.2-1.4-1.4-1.2 1.2a2 2 0 0 1-2.9-2.9l3.5-3.5a2 2 0 0 1 2.9 0l1.4-1.4Z"/></svg></button>
+      </div>
+      <div class="featured-image-wrap" style="margin-top: 32px;">
+        <img src="/assets/images/blog/cro-audit.webp" alt="Illustration of a web page with funnel-shaped bars, heatmap hotspots, a cursor and a magnifying glass inspecting the page" width="1600" height="900" fetchpriority="high" decoding="async" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border);">
+      </div>
+    </header>
+
+    <article class="post-body reveal-fade-up stagger-1">
+      <nav class="post-toc" aria-labelledby="toc-title">
+        <details open>
+          <summary id="toc-title">Table of Contents</summary>
+          <ol>
+          <li><a href="#what-is-a-cro-audit">What Is a CRO Audit?</a></li>
+          <li><a href="#when-to-run-a-cro-audit">When Should You Run a CRO Audit?</a></li>
+          <li><a href="#one-week-plan">The One-Week CRO Audit Plan</a></li>
+          <li><a href="#step-1-goals-and-baselines">Step 1: Set Goals and Baselines in GA4</a></li>
+          <li><a href="#step-2-funnel-analysis">Step 2: Find Funnel Drop-Off With Funnel Explorations</a></li>
+          <li><a href="#step-3-qualitative-research">Step 3: Watch Real Behavior With Heatmaps, Recordings and Surveys</a></li>
+          <li><a href="#step-4-heuristic-review">Step 4: Run a Heuristic Landing Page Audit</a></li>
+          <li><a href="#step-5-forms-and-checkout">Step 5: Audit Forms and Checkout Friction</a></li>
+          <li><a href="#step-6-speed-and-core-web-vitals">Step 6: Check Speed and Core Web Vitals</a></li>
+          <li><a href="#step-7-prioritize">Step 7: Prioritize Findings With ICE or PIE</a></li>
+          <li><a href="#step-8-test-design">Step 8: Design Tests That Can Actually Reach a Result</a></li>
+          <li><a href="#cro-audit-checklist">The CRO Audit Checklist</a></li>
+          <li><a href="#common-mistakes">Common CRO Audit Mistakes</a></li>
+          <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+          <li><a href="#where-to-start">Where to Start</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <aside class="post-rail" aria-label="Free review and more articles">
+        <div class="post-rail-inner">
+          <div class="rail-card rail-cta">
+            <span class="rail-eyebrow">Free CRO review</span>
+            <p class="rail-title">Getting traffic but not enough leads or sales?</p>
+            <p class="rail-text">Talk to our founder about where your funnel leaks and which fixes to test first.</p>
+            <a href="/book-a-call/" class="btn btn-primary rail-btn">Book a free call</a>
+            <a href="#lead-title-post" class="rail-link">Or get a written review <span aria-hidden="true">&darr;</span></a>
+          </div>
+          <div class="rail-card">
+            <p class="rail-heading">Keep reading</p>
+            <ul class="rail-list">
+            <li><a href="/blog/what-digital-marketing-services-does-my-business-need/">What Digital Marketing Services Does My Business Need? A Decision Framework by Business Type and Stage</a></li>
+            <li><a href="/blog/top-digital-marketing-companies/">Top Digital Marketing Companies in the US: 13 Agencies Compared by Specialty (2026)</a></li>
+            <li><a href="/blog/small-business-marketing-strategies/">Small Business Marketing Strategies: 13 Ways to Grow Without Wasting Budget</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <p>Most websites do not have a traffic problem. They have a leak. Visitors arrive from search, ads and email, then quietly leave at a pricing page, a form or a checkout step that nobody on the team has looked at in months. A CRO audit finds those leaks with data instead of opinions, so you fix the pages that cost you the most money first.</p>
+
+      <p class="define-answer">A CRO audit (conversion rate optimization audit) is a structured review of your analytics, user behavior, page design, forms, checkout and site speed to find where visitors drop out of your funnel and why. It ends with a prioritized list of fixes and a small set of A/B tests, each with a hypothesis, a primary metric and a sample size you can realistically reach.</p>
+
+      <aside class="post-note">
+        <p><strong>How to use this guide:</strong> it is written as a five-day plan a marketer can run alone or with one developer. Every platform fact and statistic links to the source we checked (Google Analytics Help, web.dev, Baymard Institute and Nielsen Norman Group). The funnel numbers in the figures are illustrative examples, not client data.</p>
+      </aside>
+
+      <h2 id="what-is-a-cro-audit">What Is a CRO Audit?</h2>
+
+      <p>A CRO audit answers three questions in order: where do people drop out, why do they drop out, and which fix is worth doing first. It is different from a redesign. A redesign changes everything at once, so you cannot tell which change helped. An audit isolates specific problems and turns them into fixes or tests you can measure one at a time.</p>
+
+      <p>A good audit combines two kinds of evidence. Quantitative data (GA4 funnels, segments, speed data) tells you <em>where</em> the problem is. Qualitative data (heatmaps, session recordings, surveys, usability sessions) tells you <em>why</em>. Relying on only one of them is the most common reason audits produce long lists of guesses instead of fixes.</p>
+
+      <h2 id="when-to-run-a-cro-audit">When Should You Run a CRO Audit?</h2>
+
+      <ul>
+        <li><strong>Traffic is rising but leads or sales are flat.</strong> More visitors with the same output usually means the new traffic does not match the page, or the page has friction.</li>
+        <li><strong>Before scaling paid media.</strong> Every dollar you add to <a href="/services/google-ads-management/">Google Ads management</a> buys more of the same conversion rate, so fix the landing page first.</li>
+        <li><strong>After a redesign, replatform or new checkout.</strong> Launches often break tracking, forms or mobile layouts in ways nobody notices for weeks.</li>
+        <li><strong>On a schedule.</strong> A light audit every quarter and a full audit once a year keeps small problems from compounding.</li>
+      </ul>
+
+      <h2 id="one-week-plan">The One-Week CRO Audit Plan</h2>
+
+      <p>You can run a useful audit in five working days if you keep the scope to your top two or three converting journeys (for example, the main lead form and the product-to-checkout path). Here is how the week breaks down.</p>
+
+      <figure class="post-figure">
+        <img src="/assets/images/blog/cro-audit-workflow.webp" alt="The one-week CRO audit workflow in eight steps: 1 goals and baselines with GA4 key events, 2 funnel drop-off with funnel exploration, 3 qualitative research with heatmaps, recordings and surveys, 4 heuristic page review, 5 forms and checkout, 6 speed and Core Web Vitals, 7 prioritize with ICE or PIE scores, 8 test design with hypothesis and sample size" width="1600" height="900" loading="lazy" decoding="async">
+        <figcaption>The eight steps of a one-week CRO audit: measure on days 1 and 2, diagnose on days 3 and 4, prioritize and plan tests on day 5.</figcaption>
+      </figure>
+
+      <div class="post-table-wrap">
+        <table class="post-table">
+          <thead><tr><th scope="col">Day</th><th scope="col">Focus</th><th scope="col">Output</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Day 1</th><td>Goals, tracking check and baselines</td><td>Verified key events and a baseline sheet by device and channel</td></tr>
+            <tr><th scope="row">Day 2</th><td>Funnel analysis and segments</td><td>The two or three steps with the biggest drop-off</td></tr>
+            <tr><th scope="row">Day 3</th><td>Heatmaps, recordings, surveys</td><td>Observed reasons people stall on those steps</td></tr>
+            <tr><th scope="row">Day 4</th><td>Heuristic review, forms, checkout, speed</td><td>A findings log with evidence for each issue</td></tr>
+            <tr><th scope="row">Day 5</th><td>Prioritization and test design</td><td>Scored backlog, quick-win list and two or three test briefs</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="step-1-goals-and-baselines">Step 1: Set Goals and Baselines in GA4</h2>
+
+      <p>Start by agreeing on what a conversion is. In GA4, the actions that matter to your business are called key events. Google's help page on <a href="https://support.google.com/analytics/answer/13128484" target="_blank" rel="noopener">key events</a> describes them as measuring "actions that are important to your business," and you mark an existing event as a key event by clicking the star next to it under Admin, Data display, Events. Two details catch people out: marking an event only affects data from that point forward, and Google Ads conversions created from key events do not appear in standard GA4 reports.</p>
+
+      <h3 id="check-tracking">Check tracking before you trust it</h3>
+      <p>Submit every form and complete a test purchase yourself, then confirm each event fires once (not twice) in GA4's DebugView or Realtime report. Duplicate purchase events, thank-you pages that load without a submission and forms that post to a third-party tool without firing an event are the usual culprits. If tracking is broken, fixing it is the first finding of the audit.</p>
+
+      <h3 id="record-baselines">Record your baselines</h3>
+      <p>For the last 90 days, record conversion rate, conversions and revenue or lead volume, split by device (mobile, desktop) and by channel (organic, paid, email, referral). Segments matter because a sitewide average hides problems: a checkout that converts well on desktop can be failing on mobile, and a landing page that works for branded search can fail for cold paid traffic.</p>
+
+      <h2 id="step-2-funnel-analysis">Step 2: Find Funnel Drop-Off With Funnel Explorations</h2>
+
+      <p>Next, map each journey as a funnel. In GA4, go to Explore and choose Funnel exploration. According to Google's <a href="https://support.google.com/analytics/answer/9327974" target="_blank" rel="noopener">funnel exploration documentation</a>, "You can define up to 10 steps in the funnel," and each step can be based on events or dimensions, though "You can't define funnel steps based on metrics."</p>
+
+      <p>Three settings change what the report tells you:</p>
+      <ul>
+        <li><strong>Open or closed funnel.</strong> "In an open funnel, users can enter the funnel in any step." Use a closed funnel when you want to see the full path from the first step; use an open funnel when people often land mid-journey, such as directly on a product page from Google Shopping.</li>
+        <li><strong>Elapsed time.</strong> Turning on "Show elapsed time" displays the average time between steps. A long gap between "begin checkout" and "add payment info" often signals confusion or a surprise cost.</li>
+        <li><strong>Next action.</strong> Choose a dimension such as page path to see the "Top 5 Next Actions" after each step. If people leave checkout for your returns or shipping page, the checkout is not answering that question.</li>
+      </ul>
+
+      <figure class="post-figure">
+        <img src="/assets/images/blog/cro-audit-funnel-drop-off.webp" alt="Illustrative funnel: 10,000 landing page views, 4,200 product or pricing views (58 percent drop), 1,300 add to cart or form starts (69 percent drop, the biggest leak), 820 checkout starts (37 percent drop) and 390 purchases or leads (52 percent drop)" width="1600" height="900" loading="lazy" decoding="async">
+        <figcaption>An illustrative funnel. The biggest relative drop, not the biggest absolute one, usually points to where an audit should dig first.</figcaption>
+      </figure>
+
+      <p>Read the funnel in relative terms. In the example above, the landing page loses more people in absolute numbers, but the step from product view to add-to-cart loses 69% of the people who were already interested. That is the step where heatmaps, recordings and a heuristic review are most likely to pay off. Break the same funnel down by device and channel before you move on: a drop that only appears on mobile is a design or speed problem, while a drop that only appears for one traffic source is usually a message-match problem.</p>
+
+      <h2 id="step-3-qualitative-research">Step 3: Watch Real Behavior With Heatmaps, Recordings and Surveys</h2>
+
+      <p>Numbers tell you which step leaks. Qualitative research tells you why. On day three, focus only on the pages behind your biggest drop-offs.</p>
+
+      <h3 id="heatmaps">Heatmaps</h3>
+      <p>Click and scroll heatmaps show what people try to interact with and how far they get. Look for clicks on elements that are not links (people expect them to be), primary calls to action below the point most mobile users reach, and heavy attention on content that does not lead anywhere. Review mobile and desktop heatmaps separately, since the layouts differ.</p>
+
+      <h3 id="session-recordings">Session recordings</h3>
+      <p>Filter recordings to sessions that reached your leaking step and then left. Watch 20 to 30 of them and log every pattern: rage clicks, repeated field errors, scrolling up and down looking for a price, or a sticky banner covering the button. Patterns that repeat across several sessions become findings; one-off oddities do not.</p>
+
+      <h3 id="surveys-and-usability-tests">On-page surveys and quick usability tests</h3>
+      <p>Ask one question at the point of hesitation, such as "Is anything stopping you from booking today?" on a pricing page or an exit survey on checkout. Then run a few short moderated sessions. Nielsen Norman Group's research on <a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" target="_blank" rel="noopener">testing with five users</a> found that a first study "with five participants has found 85% of the usability problems," which makes small, repeated rounds of testing far better value than one large study.</p>
+
+      <h2 id="step-4-heuristic-review">Step 4: Run a Heuristic Landing Page Audit</h2>
+
+      <p>A heuristic review is an expert walk-through of each key page against established usability principles. Nielsen Norman Group's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener">10 usability heuristics</a>, first published by Jakob Nielsen in 1994, are still the most useful frame. For a landing page audit, translate the most relevant ones into marketing questions:</p>
+
+      <ul>
+        <li><strong>Match between the system and the real world:</strong> does the headline use the words your customers and your ads use, or internal jargon?</li>
+        <li><strong>Visibility of system status:</strong> after someone submits a form or adds to cart, is it obvious what happened and what comes next?</li>
+        <li><strong>Error prevention:</strong> do fields accept common formats for phone numbers and ZIP codes, or reject them and make people retype?</li>
+        <li><strong>Recognition rather than recall:</strong> are price, plan details and key benefits visible at the decision point, or do people have to remember them from another page?</li>
+        <li><strong>Aesthetic and minimalist design:</strong> does anything compete with the primary call to action, such as carousels, multiple equal-weight buttons or pop-ups?</li>
+      </ul>
+
+      <p>Add three conversion-specific checks to the usability ones: message match with the ad, email or search query that brought the visitor; trust signals near the call to action (reviews, guarantees, security, clear contact details); and a single, specific next step. For ecommerce category and product pages, these checks overlap heavily with technical and content work, which is where our <a href="/services/ecommerce-seo/">ecommerce SEO service</a> often starts.</p>
+
+      <h2 id="step-5-forms-and-checkout">Step 5: Audit Forms and Checkout Friction</h2>
+
+      <p>Forms and checkouts are where intent turns into revenue, and they are often the cheapest place to win. Baymard Institute's <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">cart abandonment research</a> puts the documented average cart abandonment rate at 70.22%, based on 50 studies. Among US shoppers who abandoned during checkout (excluding those who were just browsing), the top reasons were:</p>
+
+      <div class="post-table-wrap">
+        <table class="post-table">
+          <thead><tr><th scope="col">Reason for abandoning checkout</th><th scope="col">Share of US shoppers</th><th scope="col">What to check in your audit</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Extra costs too high (shipping, tax, fees)</th><td>40%</td><td>Show shipping and fees on the product or cart page, before checkout</td></tr>
+            <tr><th scope="row">Delivery was too slow</th><td>20%</td><td>Show delivery dates, not just "standard shipping"</td></tr>
+            <tr><th scope="row">Didn't trust the site with card information</th><td>19%</td><td>Visible security cues, recognizable payment options, clear contact details</td></tr>
+            <tr><th scope="row">Site wanted me to create an account</th><td>18%</td><td>Offer guest checkout and make it the obvious path</td></tr>
+            <tr><th scope="row">Too long or complicated checkout</th><td>17%</td><td>Count fields and steps; remove anything optional</td></tr>
+            <tr><th scope="row">Website had errors or crashed</th><td>17%</td><td>Test every payment method on real mobile devices</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Field count is the most measurable fix. Baymard reports that the average US checkout displays 23.48 form elements by default, while its testing suggests an ideal flow needs 12 to 14 form elements (7 to 8 fields). The same research estimates that fixing solvable checkout usability issues could lift conversion by 35.26% for an average large ecommerce site. Treat that as Baymard's estimate for large stores, not a promise for yours, but it shows how much room checkouts usually have.</p>
+
+      <p>For lead-generation sites, apply the same logic to forms: ask only for what sales needs on the first contact, mark optional fields clearly, use inline validation, and send an instant confirmation. If leads go cold after the form, the problem may be follow-up speed rather than the page, which is where <a href="/services/marketing-automation/">marketing automation</a> that routes and answers new leads immediately can matter as much as the form itself.</p>
+
+      <h2 id="step-6-speed-and-core-web-vitals">Step 6: Check Speed and Core Web Vitals</h2>
+
+      <p>Slow, jumpy pages hurt conversion at every step. Google's <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Web Vitals guidance on web.dev</a> sets the "good" thresholds as Largest Contentful Paint (LCP) within 2.5 seconds, Interaction to Next Paint (INP) of 200 milliseconds or less, and Cumulative Layout Shift (CLS) of 0.1 or less, measured at the 75th percentile of page loads and segmented across mobile and desktop.</p>
+
+      <p>In a CRO audit, check these on the specific pages in your leaking funnel steps, not just the homepage. Use field data from the Chrome UX Report (in PageSpeed Insights or Search Console) where available, because lab tests on a fast office connection rarely match what mobile visitors experience. Pay particular attention to:</p>
+      <ul>
+        <li><strong>LCP on landing pages:</strong> oversized hero images and render-blocking scripts delay the first meaningful view.</li>
+        <li><strong>INP on forms and checkout:</strong> heavy third-party scripts make buttons and fields feel unresponsive, which reads as "broken" to a buyer.</li>
+        <li><strong>CLS near calls to action:</strong> late-loading banners and cookie notices that push the button down cause mis-taps.</li>
+      </ul>
+      <p>For the diagnosis and fixes themselves, our guide to <a href="/blog/advanced-core-web-vitals/">advanced Core Web Vitals</a> walks through LCP, INP and CLS step by step.</p>
+
+      <h2 id="step-7-prioritize">Step 7: Prioritize Findings With ICE or PIE</h2>
+
+      <p>By day five you will have more findings than you can act on. A scoring model keeps the decision honest. The two most common are:</p>
+
+      <ul>
+        <li><strong>ICE:</strong> score each finding 1 to 10 for Impact (how much it could move the key event), Confidence (how strong your evidence is) and Ease (how quickly it can be shipped), then average or multiply the scores.</li>
+        <li><strong>PIE:</strong> score Potential (how much the page can improve), Importance (how much valuable traffic it gets) and Ease. PIE works well for ranking pages; ICE works well for ranking individual ideas.</li>
+      </ul>
+
+      <figure class="post-figure">
+        <img src="/assets/images/blog/cro-audit-prioritization-matrix.webp" alt="Prioritization matrix with impact on the vertical axis and effort on the horizontal axis: quick wins are high impact and low effort, ship or test first; big bets are high impact and high effort, plan as tests; fill-ins are low impact and low effort, batch them; deprioritize is low impact and high effort, park for now" width="1600" height="900" loading="lazy" decoding="async">
+        <figcaption>Plot scored findings on an impact and effort grid so quick wins ship this week and big bets become planned tests.</figcaption>
+      </figure>
+
+      <p>Base the Confidence score on evidence, not enthusiasm. A finding seen in the funnel data, in recordings and in survey answers deserves a higher score than one idea from a single stakeholder. Then split the backlog in two: clear bugs and obvious friction (a broken mobile button, a hidden shipping cost) should simply be fixed, while changes where reasonable people disagree (a new headline, a shorter page, a different offer) should be tested.</p>
+
+      <h2 id="step-8-test-design">Step 8: Design Tests That Can Actually Reach a Result</h2>
+
+      <p>Every A/B test brief needs four things: a hypothesis tied to a finding ("Because recordings show mobile users scrolling back up to find the price, showing the price next to the button will increase add-to-cart rate"), one primary metric, the audience and pages included, and a sample size calculated before launch.</p>
+
+      <p>Sample size is where most small-business tests fail. Calculators such as Evan Miller's <a href="https://www.evanmiller.org/ab-testing/sample-size.html" target="_blank" rel="noopener">A/B test sample size calculator</a> take your baseline conversion rate, the minimum detectable effect, statistical power and significance level. Using the standard two-proportion formula at 95% significance and 80% power, our own calculation for a page converting at 3% gives these rough requirements:</p>
+
+      <div class="post-table-wrap">
+        <table class="post-table">
+          <thead><tr><th scope="col">Baseline conversion rate</th><th scope="col">Relative lift to detect</th><th scope="col">Visitors needed per variation (approx.)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">3%</th><td>20% (3.0% to 3.6%)</td><td>About 13,900</td></tr>
+            <tr><th scope="row">3%</th><td>10% (3.0% to 3.3%)</td><td>About 53,200</td></tr>
+            <tr><th scope="row">5%</th><td>20% (5.0% to 6.0%)</td><td>About 8,200</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>If a page cannot reach those numbers in four to six weeks, do not run a split test on it. Test bolder changes that could plausibly produce a larger effect, test on a higher-traffic step of the funnel, or ship the change and monitor the before-and-after trend with the caveat that seasonality and campaigns can muddy it. Set the run time in advance, run for whole weeks so weekday and weekend behavior are both included, and do not stop a test early because the dashboard looks good on day three.</p>
+
+      <h2 id="cro-audit-checklist">The CRO Audit Checklist</h2>
+
+      <p>Copy this checklist into a spreadsheet and add an Evidence, Owner and Status column. It covers everything above in the order you will run it.</p>
+
+      <div class="post-table-wrap">
+        <table class="post-table">
+          <thead><tr><th scope="col">Area</th><th scope="col">Check</th><th scope="col">Where to look</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Goals</th><td>Primary and secondary key events defined and agreed</td><td>GA4 Admin, Events</td></tr>
+            <tr><th scope="row">Tracking</th><td>Every form and purchase fires once, with correct values</td><td>GA4 DebugView, Realtime</td></tr>
+            <tr><th scope="row">Baselines</th><td>90-day conversion rate by device and channel recorded</td><td>GA4 reports, Explore</td></tr>
+            <tr><th scope="row">Funnel</th><td>Top journeys mapped; biggest relative drop-off identified</td><td>GA4 Funnel exploration</td></tr>
+            <tr><th scope="row">Segments</th><td>Drop-off compared across mobile, desktop and traffic sources</td><td>Funnel breakdowns</td></tr>
+            <tr><th scope="row">Heatmaps</th><td>Dead clicks, CTA visibility and scroll depth on leaking pages</td><td>Heatmap tool, by device</td></tr>
+            <tr><th scope="row">Recordings</th><td>20 to 30 sessions at the leaking step reviewed and patterns logged</td><td>Session recording tool</td></tr>
+            <tr><th scope="row">Voice of customer</th><td>One-question survey and 5 usability sessions completed</td><td>On-page survey, moderated tests</td></tr>
+            <tr><th scope="row">Landing page</th><td>Message match, single clear CTA, trust signals near the CTA</td><td>Heuristic review</td></tr>
+            <tr><th scope="row">Forms</th><td>Fields cut to essentials, inline validation, clear errors</td><td>Form review on mobile</td></tr>
+            <tr><th scope="row">Checkout</th><td>Costs shown early, guest checkout, delivery dates, payment tests</td><td>Test orders on real devices</td></tr>
+            <tr><th scope="row">Speed</th><td>LCP, INP and CLS "good" at the 75th percentile on funnel pages</td><td>PageSpeed Insights, Search Console</td></tr>
+            <tr><th scope="row">Prioritization</th><td>Every finding scored with ICE or PIE, with evidence noted</td><td>Audit backlog sheet</td></tr>
+            <tr><th scope="row">Testing</th><td>Hypothesis, primary metric, sample size and run time set before launch</td><td>Test brief</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="common-mistakes">Common CRO Audit Mistakes</h2>
+
+      <ul>
+        <li><strong>Auditing before checking tracking.</strong> If key events double-count or miss form submissions, every conclusion that follows is wrong.</li>
+        <li><strong>Copying a competitor's page.</strong> You see their design, not their test results, traffic mix or margins.</li>
+        <li><strong>Looking only at sitewide averages.</strong> Most real problems live in one device, one channel or one step.</li>
+        <li><strong>Testing everything.</strong> Bugs should be fixed, not tested, and low-traffic pages cannot support split tests.</li>
+        <li><strong>Treating the audit as a one-off.</strong> Pages, offers and traffic change. Re-run the light version every quarter and feed results into your wider <a href="/blog/small-business-marketing-strategies/">small business marketing strategy</a>.</li>
+      </ul>
+
+      <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+
+      <h3 id="what-is-a-cro-audit-faq">What is a CRO audit?</h3>
+      <p>A CRO audit is a structured review of your analytics, user behavior, page design, forms, checkout and site speed that finds where visitors drop out of your funnel and why. It ends with a prioritized list of fixes and a few A/B tests with clear hypotheses and sample sizes.</p>
+
+      <h3 id="how-long-does-a-cro-audit-take">How long does a CRO audit take?</h3>
+      <p>A focused audit of two or three key journeys can be done in about five working days: two days for goals, tracking and funnel analysis, two days for qualitative research and page reviews, and one day for prioritization and test design. Larger sites with many templates or markets take longer.</p>
+
+      <h3 id="what-tools-do-i-need-for-a-cro-audit">What tools do I need for a CRO audit?</h3>
+      <p>At minimum you need Google Analytics 4 with working key events, a heatmap and session recording tool, a way to run a short on-page survey, and PageSpeed Insights or Search Console for Core Web Vitals. An A/B testing tool is only needed once you have tests with enough traffic to reach a result.</p>
+
+      <h3 id="how-do-i-find-funnel-drop-off-in-ga4">How do I find funnel drop-off in GA4?</h3>
+      <p>Go to Explore, choose Funnel exploration and add up to 10 steps based on events or dimensions, such as page view, add to cart, begin checkout and purchase. Use an open funnel if people often enter mid-journey, turn on elapsed time to spot slow steps, and break the funnel down by device and channel.</p>
+
+      <h3 id="whats-the-difference-between-ice-and-pie">What is the difference between ICE and PIE scoring?</h3>
+      <p>ICE scores each idea for Impact, Confidence and Ease, which suits ranking individual fixes. PIE scores Potential, Importance and Ease, which suits ranking which pages to work on first. Both are simple frameworks; what matters most is basing the scores on evidence from your audit rather than opinion.</p>
+
+      <h3 id="how-much-traffic-do-i-need-for-ab-testing">How much traffic do I need for A/B testing?</h3>
+      <p>It depends on your baseline conversion rate and the lift you want to detect. At 95% significance and 80% power, a page converting at 3% needs roughly 13,900 visitors per variation to detect a 20% relative lift, and about 53,200 to detect a 10% lift. Low-traffic pages are better served by fixes and bolder changes than by split tests.</p>
+
+      <h3 id="should-i-hire-an-agency-for-a-cro-audit">Should I do a CRO audit myself or hire someone?</h3>
+      <p>A marketer with GA4 access and one developer can run the process in this guide. Outside help is worth it when tracking is unreliable, when the team is too close to the pages to see friction, or when you need someone to run tests and implement changes across analytics, paid media and automation.</p>
+
+      <h2 id="where-to-start">Where to Start</h2>
+
+      <p>Pick your single most valuable journey, verify its tracking today and build the funnel in GA4. The biggest relative drop-off tells you where to spend the rest of the week. Fix the obvious friction, test the debatable changes and re-check the numbers after a full month.</p>
+
+      <p>If you want a second pair of eyes, see <a href="/our-approach/">how we approach testing-led work</a>, or <a href="/book-a-call/">book a free call</a> and we will look at your funnel with you. If paid traffic is part of the picture, our <a href="/services/google-ads-management/">Google Ads team</a> judges campaigns on cost per lead, which only improves when the landing page converts.</p>
+
+      <!-- silo:start -->
+      <aside class="silo-nav" aria-labelledby="silo-nav-title">
+        <p class="silo-eyebrow">Part of our AI Marketing &amp; Automation guides</p>
+        <h2 id="silo-nav-title">More on <a href="/blog/category/ai-marketing/">AI Marketing &amp; Automation</a></h2>
+        <ul class="silo-list">
+          <li><a href="/blog/what-digital-marketing-services-does-my-business-need/">What Digital Marketing Services Does My Business Need? A Decision Framework by Business Type and Stage</a></li>
+          <li><a href="/blog/top-digital-marketing-companies/">Top Digital Marketing Companies in the US: 13 Agencies Compared by Specialty (2026)</a></li>
+          <li><a href="/blog/small-business-marketing-strategies/">Small Business Marketing Strategies: 13 Ways to Grow Without Wasting Budget</a></li>
+          <li><a href="/blog/chatgpt-ads/">ChatGPT Ads: How They Work, What They Cost and How to Get Started</a></li>
+          <li><a href="/blog/how-to-use-ai-for-social-media/">How to Use AI for Social Media: A Weekly Workflow That Keeps Your Brand Human</a></li>
+          <li><a href="/blog/ai-agents-for-marketing/">AI Agents for Marketing: Use Cases by Channel, Platforms Agencies Use and How to Deploy Safely</a></li>
+          <li><a href="/blog/best-llm-for-business-and-marketing/">Best LLM for Business and Marketing in 2026: Claude vs ChatGPT vs Gemini, and How to Choose</a></li>
+          <li><a href="/blog/ai-advertising/">AI Advertising: How to Use AI for Ads and Advertise Inside AI Answers</a></li>
+          <li><a href="/blog/companies-that-outsource/">10 Companies You Didn&#x27;t Know Outsource (and What They Never Hand Over)</a></li>
+        </ul>
+        <p class="silo-links"><span>Related:</span> <a href="/services/ai-lead-agents/">AI Lead Agents</a> · <a href="/services/marketing-automation/">Marketing Automation</a> · <a href="/services/email-marketing/">Email Marketing</a> · <a href="/blog/category/ai-marketing/" class="silo-all">All AI Marketing &amp; Automation guides →</a></p>
+      </aside>
+      <!-- silo:end -->
+
+      <section class="lead-box" aria-labelledby="lead-title-post">
+        <span class="lead-eyebrow">Free CRO review</span>
+        <h2 id="lead-title-post" class="lead-title">Where is your funnel leaking?</h2>
+        <p class="lead-text">Send your website and the page that matters most. I'll review your funnel, forms and page speed, then reply personally with the first fixes I would make and what is worth testing.</p>
+        <form class="lead-form" method="post" action="https://formsubmit.co/digitalkazmi@gmail.com">
+          <input type="hidden" name="_subject" value="New blog lead: CRO Audit">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://llmsmarketing.com/thank-you/">
+          <input type="hidden" name="source_page" value="https://llmsmarketing.com/blog/cro-audit/">
+          <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="lead-fields">
+            <div class="form-group">
+              <label for="lead-name-post" class="form-label">Name</label>
+              <input type="text" id="lead-name-post" class="form-control" name="name" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="lead-email-post" class="form-label">Email</label>
+              <input type="email" id="lead-email-post" class="form-control" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="form-group lead-full">
+              <label for="lead-website-post" class="form-label">Website</label>
+              <input type="text" id="lead-website-post" class="form-control" name="website" placeholder="yourwebsite.com" autocomplete="url" required>
+            </div>
+            <div class="form-group lead-full">
+              <label for="lead-message-post" class="form-label">What do you need help with? <span class="lead-optional">(optional)</span></label>
+              <textarea id="lead-message-post" class="form-control" name="message" rows="3" placeholder="e.g. Lots of traffic to our pricing page but very few demo requests"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary lead-submit">Get My Free Review</button>
+          <p class="lead-note">No spam. Your details come straight to me and are never shared.</p>
+        </form>
+      </section>
+
+      <div class="share-bar share-bar--end">
+        <span class="share-label">Share</span>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F" aria-label="Share on LinkedIn" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.7 3.4A2.3 2.3 0 1 1 0 3.4a2.3 2.3 0 0 1 4.7 0ZM.3 8h4.4v14H.3V8Zm7.1 0h4.2v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V22h-4.4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V22H7.4V8Z"/></svg></a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F&amp;text=CRO%20Audit%3A%20How%20to%20Run%20a%20Conversion%20Rate%20Optimization%20Audit%20in%20One%20Week" aria-label="Share on X" title="Share on X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.8 2.3h7l4.8 6.4 5.6-6.4Zm-1.2 17.9h1.9L6.9 4.2H4.9l12.1 16Z"/></svg></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F" aria-label="Share on Facebook" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.4 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.2v3.2H10V22h3.4Z"/></svg></a>
+        <a href="mailto:?subject=CRO%20Audit%3A%20How%20to%20Run%20a%20Conversion%20Rate%20Optimization%20Audit%20in%20One%20Week&amp;body=https%3A%2F%2Fllmsmarketing.com%2Fblog%2Fcro-audit%2F" aria-label="Share by email" title="Share by email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 5h20v14H2V5Zm2 2v.5l8 5 8-5V7H4Zm16 2.8-8 5-8-5V17h16V9.8Z"/></svg></a>
+        <button type="button" class="share-copy" data-url="https://llmsmarketing.com/blog/cro-audit/" aria-label="Copy link" title="Copy link"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.6 13.4a4 4 0 0 0 5.7 0l3.5-3.5a4 4 0 0 0-5.7-5.7l-1.2 1.2 1.4 1.4 1.2-1.2a2 2 0 0 1 2.9 2.9l-3.5 3.5a2 2 0 0 1-2.9 0l-1.4 1.4Zm2.8-2.8a4 4 0 0 0-5.7 0l-3.5 3.5a4 4 0 0 0 5.7 5.7l1.2-1.2-1.4-1.4-1.2 1.2a2 2 0 0 1-2.9-2.9l3.5-3.5a2 2 0 0 1 2.9 0l1.4-1.4Z"/></svg></button>
+      </div>
+
+      <aside class="author-box" aria-label="About the author">
+        <a href="/author/mohd-adil-kazmi/" class="author-avatar author-avatar--md" aria-hidden="true" tabindex="-1"><img src="/assets/images/mohd-adil-kazmi.jpg" alt="" width="64" height="64" loading="lazy" decoding="async"></a>
+        <div>
+          <span class="author-box-label">Written by</span>
+          <a href="/author/mohd-adil-kazmi/" class="author-box-name" rel="author">Mohd Adil Kazmi</a>
+          <span class="author-box-role">SEO Consultant &amp; Founder, LLM's Marketing</span>
+          <p>Mohd Adil Kazmi is an SEO consultant and the founder of LLM's Marketing, with more than eight years of hands-on experience in search. The work centres on SEO experiments: testing how changes to content, site structure, internal links and structured data affect rankings, and how brands show up in AI answers from ChatGPT, Perplexity and Gemini.</p>
+          <div class="author-box-links">
+            <a href="/author/mohd-adil-kazmi/">More articles</a>
+            <a href="https://www.linkedin.com/in/best-seo-provider/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.7 3.4A2.3 2.3 0 1 1 0 3.4a2.3 2.3 0 0 1 4.7 0ZM.3 8h4.4v14H.3V8Zm7.1 0h4.2v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V22h-4.4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V22H7.4V8Z"/></svg> LinkedIn</a>
+          </div>
+        </div>
+      </aside>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid footer-grid--4">
+        <div class="footer-brand">
+          <a href="/" class="logo">LLM’s Marketing<span class="logo-dot"></span></a>
+          <p>LLM marketing agency helping brands get found on Google and recommended by ChatGPT, Google AI Mode, Perplexity, Gemini and Claude.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services/ai-search-visibility/">AI Search Visibility</a></li>
+            <li><a href="/services/ai-seo/">AI SEO &amp; Content</a></li>
+            <li><a href="/services/ai-lead-agents/">AI Lead Agents</a></li>
+            <li><a href="/services/marketing-automation/">Marketing Automation</a></li>
+            <li><a href="/services/email-marketing/">Email Marketing</a></li>
+            <li><a href="/services/google-ads-management/">Google Ads Management</a></li>
+            <li><a href="/personal-injury-seo/">Personal Injury SEO</a></li>
+            <li><a href="/dental-seo-cypress-tx/">Dental SEO in Cypress, TX</a></li>
+            <li><a href="/seo-for-investment-firms/">SEO for Investment Firms</a></li>
+            <li><a href="/seo-for-electricians/">SEO for Electricians</a></li>
+            <li><a href="/seo-for-orthodontists/">SEO for Orthodontists</a></li>
+            <li><a href="/seo-for-hvac/">HVAC SEO</a></li>
+            <li><a href="/seo-for-educational-institutions/">SEO for Education</a></li>
+            <li><a href="/seo-company-cypress-tx/">SEO Company in Cypress, TX</a></li>
+            <li><a href="/seo-by-city/">SEO by City</a></li>
+            <li><a href="/our-services/">All services</a></li>
+            <li><a href="/industries/">All industries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about-us/">About us</a></li>
+            <li><a href="/our-approach/">Our approach</a></li>
+            <li><a href="/author/mohd-adil-kazmi/">Our founder</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Blog &amp; insights</a></li>
+            <li><a href="/report/">Research reports</a></li>
+            <li><a href="/contact/">Contact us</a></li>
+            <li><a href="/privacy-policy/">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Connect</h4>
+          <p><a href="/contact/">Send us a message →</a></p>
+          <p>Email: <a href="mailto:info@llmsmarketing.com">info@llmsmarketing.com</a></p>
+          <p>Address: 165 Madison Avenue, NYC</p>
+          <p><a href="/book-a-call/">Book a discovery call →</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 LLM's Marketing. All Rights Reserved.</span>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/llms-marketing/" class="linkedin-link" aria-label="LLM's Marketing on LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.7 3.4A2.3 2.3 0 1 1 0 3.4a2.3 2.3 0 0 1 4.7 0ZM.3 8h4.4v14H.3V8Zm7.1 0h4.2v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V22h-4.4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V22H7.4V8Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
